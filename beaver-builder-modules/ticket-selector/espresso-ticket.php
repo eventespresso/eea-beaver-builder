@@ -470,18 +470,6 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         )
                     ),
 
-                    'date_color'    => array(
-                        'type'          => 'color',
-                        'label'         => __('Date Color', 'event_espresso'),
-                        'default'       => '',
-                        'show_reset'    => true,
-                        'preview'           => array(
-                            'type'          => 'css',
-                            'selector'      => '.event-date',
-                            'property'      => 'color'
-                        )
-                    ),
-
                 )
             ),
         )
