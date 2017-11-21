@@ -2,11 +2,11 @@
 /*
   Plugin Name: Event Espresso - Beaver Builder (EE 4.9+)
   Plugin URI: http://www.eventespresso.com
-  Description: The Event Espresso Beaver Builder adds a Beaver Builder
+  Description: The Event Espresso Beaver Builder add-on adds Event Espresso options to the BB interface.
   Version: 1.0.0.dev.000
   Author: Event Espresso
   Author URI: http://www.eventespresso.com
-  Copyright 2014 Event Espresso (email : support@eventespresso.com)
+  Copyright 2017 Event Espresso (email : support@eventespresso.com)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as
@@ -29,7 +29,7 @@
  *
  * @ package		Event Espresso
  * @ author			Event Espresso
- * @ copyright	(c) 2008-2014 Event Espresso  All Rights Reserved.
+ * @ copyright	(c) 2008-2017 Event Espresso  All Rights Reserved.
  * @ license		http://eventespresso.com/support/terms-conditions/   * see Plugin Licensing *
  * @ link				http://www.eventespresso.com
  * @ version	 	EE4
