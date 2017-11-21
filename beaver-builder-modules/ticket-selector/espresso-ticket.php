@@ -695,7 +695,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                     'button_hover_text_color'    => array(
                         'type'                   => 'color',
                         'label'                  => __('Text Color Hover', 'event_espresso'),
-                        'default'                => '',
+                        'default'                => 'eeeeee',
                         'show_reset'             => true,
                         'preview'                => array(
                             'type'               => 'css',
@@ -706,7 +706,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                     'button_bg_color'   => array(
                         'type'          => 'color',
                         'label'         => __('Background Color', 'event_espresso'),
-                        'default'       => '',
+                        'default'       => '333333',
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
@@ -757,7 +757,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                     'button_border_color'    => array(
                         'type'               => 'color',
                         'label'              => __('Border Color', 'event_espresso'),
-                        'default'            => '',
+                        'default'            => '333333',
                         'show_reset'         => true,
                         'preview'            => array(
                             'type'           => 'css',
