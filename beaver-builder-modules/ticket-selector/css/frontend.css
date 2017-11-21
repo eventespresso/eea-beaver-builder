@@ -1,0 +1,36 @@
+/**
+ * This file should contain frontend styles that
+ * will be applied to all module instances.
+ */
+
+.bb-ee-input.input-small {
+    width: 46px !important;
+}
+
+.pp-ee-content {
+	position: relative;
+}
+
+.pp-ee-content:before {
+	content: "";
+	display: block;
+	position: absolute;;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pp-ee-content .event-title,
+.pp-ee-content .event-description {
+	position: relative;
+}
+
+.pp-ee-content .espresso_event_type-single-event form {
+	position: relative;
+}
+
+.pp-ee-content .espresso_event_type-single-event {
+	width: 100% !important;
+}
+
