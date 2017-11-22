@@ -37,6 +37,9 @@ class EspressoTicketModule extends FLBuilderModule {
 
 require_once EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_PATH . '/includes/functions.php';
 
+add_action('fl_builder_control_event-picker', 'ee_event_picker', 1, 4);
+
+
 /**
  * Register the module and its event settings.
  */
@@ -48,10 +51,10 @@ FLBuilder::register_module('EspressoTicketModule', array(
                 'title'         => '', // Section Title
                 'fields'        => array( // Section Fields
                     'select_event_field' => array(
-                        'type'          => 'select',
+                        'type'          => 'event-picker',
                         'label'         => __('Select Event', 'event_espresso'),
                         'default'       => '',
-                        'options'       => espresso_module_event_titles()
+                        // 'options'       => array(),//espresso_module_event_titles()
                     ),
                 
                 )
