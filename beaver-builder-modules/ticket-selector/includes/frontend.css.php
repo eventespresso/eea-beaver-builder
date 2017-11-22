@@ -10,7 +10,7 @@
 }
 
 .fl-node-<?php echo $id; ?> .pp-ee-content {
-	background-color: <?php echo $settings->form_bg_color ? pp_hex2rgba('#' . $settings->event_bg_color, $settings->event_background_opacity) : 'transparent'; ?>;
+	background-color: <?php echo $settings->event_bg_color ? espresso_hex2rgba('#' . $settings->event_bg_color, $settings->event_background_opacity) : 'transparent'; ?>;
     <?php if( $settings->event_bg_image && $settings->form_bg_type == 'image' ) { ?>
 	background-image: url('<?php echo $settings->event_bg_image_src; ?>');
     <?php } ?>
@@ -48,7 +48,7 @@
 
 <?php if( $settings->event_bg_image && $settings->form_bg_type == 'image' ) { ?>
 .fl-node-<?php echo $id; ?> .pp-ee-content:before {
-	background-color: <?php echo ( $settings->event_bg_overlay ) ? pp_hex2rgba('#' . $settings->event_bg_overlay, $settings->event_bg_overlay_opacity / 100 ) : 'transparent'; ?>;
+	background-color: <?php echo ( $settings->event_bg_overlay ) ? espresso_hex2rgba('#' . $settings->event_bg_overlay, $settings->event_bg_overlay_opacity / 100 ) : 'transparent'; ?>;
 }
 <?php } ?>
 
@@ -117,13 +117,21 @@
     /*font-size: 1.1em;*/
 }
 
-.fl-node-<?php echo $id; ?> .event-datetimes .ee-event-datetimes-ul li {
-    list-style-type: none;
-    margin: 0 0 1em;
-}
 
 .fl-node-<?php echo $id; ?> .powered-by-event-espresso-credit {
     display: none;
+}
+
+.fl-node-<?php echo $id; ?> .tckt-slctr-tbl-tr {
+    <?php if( $settings->ticket_text_color ) { ?>
+    color: #<?php echo $settings->ticket_text_color; ?> !important;
+    <?php } ?>
+    <?php if( $settings->ticket_font_size ) { ?>
+    font-size: <?php echo $settings->ticket_font_size; ?>px;
+    <?php } ?>
+    <?php if( $settings->ticket_font_family['family'] != 'Default' ) { ?>
+    <?php FLBuilderFonts::font_css( $settings->ticket_font_family ); ?>
+    <?php } ?>
 }
 
 .fl-node-<?php echo $id; ?> .event-tickets .display-tckt-slctr-tkt-details {
@@ -136,10 +144,16 @@
     <?php } ?>
 }
 
-.fl-node-<?php echo $id; ?> .event-date .espresso_event_date,
-.fl-node-<?php echo $id; ?> .event-date .espresso_event_date_range{
-    <?php if( $settings->date_color ) { ?>
-    color: #<?php echo $settings->date_color; ?> !important;
+/* Event Dates */
+.fl-node-<?php echo $id; ?> .event-datetimes .ee-event-datetimes-ul li {
+    list-style-type: none;
+    margin: 0 0 1em;
+}
+
+.fl-node-<?php echo $id; ?> .event-date.espresso_event_date,
+.fl-node-<?php echo $id; ?> .event-date.espresso_event_date_range{
+    <?php if( $settings->date_text_color ) { ?>
+    color: #<?php echo $settings->date_text_color; ?> !important;
     <?php } ?>
     <?php if( $settings->date_font_size ) { ?>
     font-size: <?php echo $settings->date_font_size; ?>px;
@@ -152,24 +166,99 @@
     <?php } ?>
 }
 
-.fl-node-<?php echo $id; ?> .ticket-selector-submit-btn-wrap {
+/* Button */
+.event-tickets .ticket-selector-submit-btn, .event-tickets .ticket-selector-submit-btn-wrap {
+      
+}
 
+.fl-node-<?php echo $id; ?> .pp-ee-content .event-tickets .ticket-selector-submit-btn, .fl-node-<?php echo $id; ?> .pp-ee-content .event-tickets .ticket-selector-submit-btn-wrap {
+    <?php 
+    //EE4 Core styles are overriding everything so I had to resort to this
+    if( $settings->button_alignment ) { 
+            switch ($settings->button_alignment){
+                case 'center':
+                    ?>
+                    display: table;
+                    float: unset;
+                    margin: 0 auto;
+                    text-align: center;
+                    <?php
+                break;
+                case 'left':
+                    ?>
+                    float: left;
+                    text-align: left;
+                    <?php
+                break;
+                case 'right':
+                    ?>
+                    float: rigth;
+                    text-align: right;
+                    <?php
+                break;
+            }
+    } ?>
+
+    <?php if ($settings->button_width == 'true') {
+        echo 'float: unset;';
+        echo 'text-align: center;';
+    } ?>
+    width: <?php echo ($settings->button_width == 'true') ? '100%' : 'auto'; ?>;
+}
+
+.fl-node-<?php echo $id; ?> .ticket-selector-submit-btn {
+    <?php if ($settings->button_width == 'true') {echo 'float: unset;';} ?>
+    width: <?php echo ($settings->button_width == 'true') ? '100%' : 'auto'; ?>;
     <?php if( $settings->button_text_color ) { ?>
-    color: #<?php echo $settings->button_text_color; ?> !important;
+    color: #<?php echo $settings->button_text_color; ?>;
     <?php } ?>
-    <?php if( $settings->button_font_size ) { ?>
-    font-size: <?php echo $settings->button_font_size; ?>px;
+    background-color: <?php echo $settings->button_bg_color ? espresso_hex2rgba('#' . $settings->button_bg_color, $settings->button_background_opacity) : 'transparent'; ?>;
+    border: <?php echo $settings->button_border_width; ?>px solid <?php echo $settings->button_border_color ? '#' . $settings->button_border_color : 'transparent'; ?>;
+    <?php if( $settings->button_border_radius >= 0 ) { ?>
+    border-radius: <?php echo $settings->button_border_radius; ?>px;
+    -moz-border-radius: <?php echo $settings->button_border_radius; ?>px;
+    -webkit-border-radius: <?php echo $settings->button_border_radius; ?>px;
+    -ms-border-radius: <?php echo $settings->button_border_radius; ?>px;
+    -o-border-radius: <?php echo $settings->button_border_radius; ?>px;
+    <?php } ?>
+    <?php if( $settings->button_padding_top_bottom >= 0 ) { ?>
+    padding-top: <?php echo $settings->button_padding_top_bottom; ?>px;
+    padding-bottom: <?php echo $settings->button_padding_top_bottom; ?>px;
+    <?php } ?>
+    <?php if( $settings->button_padding_left_right >= 0 ) { ?>
+    padding-left: <?php echo $settings->button_padding_left_right; ?>px;
+    padding-right: <?php echo $settings->button_padding_left_right; ?>px;
     <?php } ?>
     <?php if( $settings->button_font_family['family'] != 'Default' ) { ?>
     <?php FLBuilderFonts::font_css( $settings->button_font_family ); ?>
     <?php } ?>
-    <?php if( $settings->button_alignment ) { ?>
-    text-align: <?php echo $settings->button_alignment; ?>;
+    <?php if( $settings->button_font_size ) { ?>
+    font-size: <?php echo $settings->button_font_size; ?>px;
     <?php } ?>
-    
+    white-space: normal;
 }
 
-.fl-node-<?php echo $id; ?> .ticket-selector-submit-btn  {
-    width: <?php echo ($settings->button_width == 'true') ? '100%' : 'auto'; ?>;
-
+.fl-node-<?php echo $id; ?> .ticket-selector-submit-btn {
+    <?php if( $settings->button_width == 'true' ) { ?>
+        margin-bottom: 5px !important;
+    <?php } ?>
+}
+.fl-node-<?php echo $id; ?> .ticket-selector-submit-btn {
+    <?php if( $settings->button_padding_top_bottom >= 0 ) { ?>
+    padding-top: <?php echo $settings->button_padding_top_bottom; ?>px;
+    padding-bottom: <?php echo $settings->button_padding_top_bottom; ?>px;
+    <?php } ?>
+    <?php if( $settings->button_padding_left_right >= 0 ) { ?>
+    padding-left: <?php echo $settings->button_padding_left_right; ?>px;
+    padding-right: <?php echo $settings->button_padding_left_right; ?>px;
+    <?php } ?>
+}
+.fl-node-<?php echo $id; ?> .ticket-selector-submit-btn:hover {
+    <?php if( $settings->button_hover_text_color ) { ?>
+    color: #<?php echo $settings->button_hover_text_color; ?>;
+    <?php } ?>
+    background: <?php echo $settings->button_hover_bg_color ? '#' . $settings->button_hover_bg_color : 'transparent'; ?>;
+    <?php if( $settings->button_border_width >= 0 ) { ?>
+    border-width: <?php echo $settings->button_border_width; ?>px;
+    <?php } ?>
 }
