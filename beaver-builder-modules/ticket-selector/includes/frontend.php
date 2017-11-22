@@ -97,3 +97,6 @@ if ( $settings->select_event_field ) {
 <?php
 	}
 }
+else {
+    echo esc_html__('Please select an Event and Save for Preview.', 'event_espresso');
+}
