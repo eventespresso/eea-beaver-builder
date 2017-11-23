@@ -19,8 +19,15 @@
 		<?php
 
 		//Events Table
+		//Shortcode Parameters: footable = false (disables FooTable), table_search = false (turn off search), 
+		//  table_style = standalone (alternate styles: metro), table_sort = false (disables FooTable sorting), 
+		//  table_striping = false (turn off striping), table_paging = false (hide paging), table_pages = 10, 
+		//  limit = 1000, show_expired = FALSE, month = NULL, category_slug = NULL, category_filter = false, 
+		//  order_by = start_date, sort = ASC, 
+		//  template_file = espresso-events-table-template-toggle.template.php (creates a table with two columns and a toggle to expand the row) (users can upload custom templates to wp-content/uploads/espresso/templates/)
+
 			echo '<div class="events-table">';
-		    	echo do_shortcode( '[ESPRESSO_EVENTS_TABLE_TEMPLATE]' );
+		    	echo do_shortcode( '[ESPRESSO_EVENTS_TABLE_TEMPLATE ]' );
 		    echo '</div>';
 		   
 		?>
