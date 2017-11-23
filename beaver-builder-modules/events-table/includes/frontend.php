@@ -1,4 +1,4 @@
-<div class="pp-ee-content">
+<div class="ee-table-content">
 	<div class="espresso_events_table">
 		<h3 class="events-table-title">
 			<?php 

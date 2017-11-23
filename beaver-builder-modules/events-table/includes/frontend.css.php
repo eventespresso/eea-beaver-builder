@@ -5,7 +5,7 @@
 */
 
 
-.fl-node-<?php echo $id; ?> .pp-ee-content {
+.fl-node-<?php echo $id; ?> .ee-table-content {
 	max-width: 100%;
 }
 
@@ -46,8 +46,8 @@
 	<?php } ?>
 }
 
-<?php if( $settings->table_bg_image && $settings->table_bg_type == 'image' ) { ?>
-.fl-node-<?php echo $id; ?> .pp-ee-content:before {
+<?php if( $settings->table_bg_image && $settings->table_bg_type == 'photo' ) { ?>
+.fl-node-<?php echo $id; ?> .ee-table-content:before {
 	background-color: <?php echo ( $settings->table_bg_overlay ) ? espresso_hex2rgba('#' . $settings->table_bg_overlay, $settings->table_bg_overlay_opacity / 100 ) : 'transparent'; ?>;
 }
 <?php } ?>

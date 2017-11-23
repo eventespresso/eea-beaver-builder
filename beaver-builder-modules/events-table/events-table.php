@@ -119,7 +119,7 @@ FLBuilder::register_module('EspressoTableModule', array(
         'title'         => __('Style', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
             'table_setting'      => array( // Section
-                'title'         => __('Table Background', 'event_espresso'), // Section Title
+                'title'         => __('Container Background', 'event_espresso'), // Section Title
                 'fields'        => array( // Section Fields
                     'table_bg_type'      => array(
                         'type'          => 'select',
@@ -145,7 +145,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.ee-table-content',
                             'property'  => 'background-color'
                         )
                     ),
@@ -163,7 +163,7 @@ FLBuilder::register_module('EspressoTableModule', array(
 						'show_remove'	=> true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.ee-table-content',
                             'property'  => 'background-image'
                         )
                     ),
@@ -196,11 +196,11 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'type'          => 'text',
                         'label'         => __('Border Width', 'event_espresso'),
                         'description'   => 'px',
-                        'class'         => 'bb-ee-input input-small',
+                        'class'         => 'ee-table-input input-small',
                         'default'       => 0,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.ee-table-content',
                             'property'  => 'border-width',
                             'unit'      => 'px'
                         )
@@ -212,7 +212,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.ee-table-content',
                             'property'  => 'border-color'
                         )
                     ),
@@ -227,7 +227,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         ),
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.ee-table-content',
                             'property'  => 'border-style'
                         )
                     ),
@@ -241,10 +241,10 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'label'         => __('Round Corners', 'event_espresso'),
                         'description'   => 'px',
                         'default'       => 2,
-                        'class'         => 'bb-ee-input input-small',
+                        'class'         => 'ee-table-input input-small',
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.ee-table-content',
                             'property'  => 'border-radius',
                             'unit'      => 'px'
                         )
@@ -267,7 +267,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                                 'icon'		=> 'fa-long-arrow-up',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.ee-table-content',
                                     'property'  => 'padding-top',
                                     'unit'      => 'px'
                                 )
@@ -279,7 +279,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                                 'icon'		=> 'fa-long-arrow-down',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.ee-table-content',
                                     'property'  => 'padding-bottom',
                                     'unit'      => 'px'
                                 )
@@ -291,7 +291,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                                 'icon'		=> 'fa-long-arrow-left',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.ee-table-content',
                                     'property'  => 'padding-left',
                                     'unit'      => 'px'
                                 )
@@ -303,7 +303,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                                 'icon'		=> 'fa-long-arrow-right',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.ee-table-content',
                                     'property'  => 'padding-right',
                                     'unit'      => 'px'
                                 )
@@ -344,7 +344,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'type'          => 'text',
                         'label'         => __('Font Size', 'event_espresso'),
                         'description'   => 'px',
-                        'class'         => 'bb-ee-input input-small',
+                        'class'         => 'ee-table-input input-small',
                         'default'       => '',
                         'preview'       => array(
                             'type'      => 'css',
@@ -385,7 +385,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'type'                 => 'text',
                         'label'                => __('Font Size', 'event_espresso'),
                         'description'          => 'px',
-                        'class'                => 'bb-ee-input input-small',
+                        'class'                => 'ee-table-input input-small',
                         'default'              => '',
                         'preview'              => array(
                             'type'             => 'css',

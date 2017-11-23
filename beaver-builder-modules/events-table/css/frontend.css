@@ -3,15 +3,15 @@
  * will be applied to all module instances.
  */
 
-.bb-ee-input.input-small {
+.ee-table-input.input-small {
     width: 46px !important;
 }
 
-.pp-ee-content {
+.ee-table-content {
 	position: relative;
 }
 
-.pp-ee-content:before {
+.ee-table-content:before {
 	/*content: "";*/
 	display: block;
 	position: absolute;;
@@ -21,16 +21,16 @@
 	height: 100%;
 }
 
-.pp-ee-content .event-title,
-.pp-ee-content .event-description {
+.ee-table-content .event-title,
+.ee-table-content .event-description {
 	position: relative;
 }
 
-.pp-ee-content .espresso_event_type-single-event form {
+.ee-table-content .espresso_event_type-single-event form {
 	position: relative;
 }
 
-.pp-ee-content .espresso_event_type-single-event {
+.ee-table-content .espresso_event_type-single-event {
 	width: 100% !important;
 }
 
