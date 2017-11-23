@@ -64,13 +64,16 @@ Class  EE_Beaver_Builder extends EE_Addon
             add_action('init', array('EE_Beaver_Builder', 'init_beaver_builder_module'));
         }
         // // register addon via Plugin API
-        // EE_Register_Addon::register(
-        // 	'Beaver_Builder',
-        // 	array(
-        // 		'version'               => EE_BEAVER_BUILDER_VERSION,
-        // 		'plugin_slug'           => 'espresso_beaver_builder',
-        // 		'min_core_version'      => EE_BEAVER_BUILDER_CORE_VERSION_REQUIRED,
-        // 		'main_file_path'        => EE_BEAVER_BUILDER_PLUGIN_FILE,
+        EE_Register_Addon::register(
+            'Beaver_Builder',
+            array(
+                'version'          => EE_BEAVER_BUILDER_VERSION,
+                'plugin_slug'      => 'espresso_beaver_builder',
+                'min_core_version' => EE_BEAVER_BUILDER_CORE_VERSION_REQUIRED,
+                'main_file_path'   => EE_BEAVER_BUILDER_PLUGIN_FILE,
+                'module_paths'     => array(EE_BEAVER_BUILDER_PATH . 'EED_Beaver_Builder_Module_Fields.module.php'),
+            )
+        );
         // 		'namespace'             => array(
         // 			'FQNS' => 'EventEspresso\NewAddon',
         // 			'DIR'  => __DIR__,

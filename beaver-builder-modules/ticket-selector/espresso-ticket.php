@@ -22,7 +22,7 @@ class EspressoTicketModule extends FLBuilderModule {
             'url'           => EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_URL,
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
-            'icon'				=> 'editor-table.svg',
+            'icon'				=> 'editor-table.svg'
         ));
     }
 
@@ -36,8 +36,6 @@ class EspressoTicketModule extends FLBuilderModule {
 }
 
 require_once EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_PATH . '/includes/functions.php';
-
-add_action('fl_builder_control_event-picker', 'ee_event_picker', 10, 4);
 
 
 /**
@@ -54,7 +52,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'type'          => 'event-picker',
                         'label'         => __('Select Event', 'event_espresso'),
                         'default'       => '',
-                        // 'options'       => array(),//espresso_module_event_titles()
+                         'options'       => array(),//espresso_module_event_titles()
                     ),
                 
                 )
