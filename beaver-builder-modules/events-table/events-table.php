@@ -109,6 +109,67 @@ FLBuilder::register_module('EspressoTableModule', array(
                             'property'  => 'text-align'
                         )
                     ),
+                    'category_filter'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Category Filter', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_search'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Table Search', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_sort'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Table Sorting', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_paging'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Table Paging', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_striping'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Table Striping', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'show_expired'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Expired Events', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'limit'    => array(
+                        'type'                 => 'text',
+                        'label'                => __('Limit', 'event_espresso'),
+                        //'class'                => 'bb-gf-input input-small',
+                        'default'              => '1000',
+                        'description'          => __('between 1 to 1000', 'event_espresso'),
+                    ),
 
                 )
             ),
@@ -121,7 +182,7 @@ FLBuilder::register_module('EspressoTableModule', array(
             'table_setting'      => array( // Section
                 'title'         => __('Container Background', 'event_espresso'), // Section Title
                 'fields'        => array( // Section Fields
-                    'table_bg_type'      => array(
+                    /*'table_bg_type'      => array(
                         'type'          => 'select',
                         'label'         => __('Background Type', 'event_espresso'),
                         'default'       => 'color',
@@ -137,7 +198,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                                 'fields'    => array('table_bg_image','table_bg_size','table_bg_repeat', 'event_bg_overlay', 'event_bg_overlay_opacity')
                             )
                         )
-                    ),
+                    ),*/
                     'table_bg_color'     => array(
                         'type'          => 'color',
                         'label'         => __('Background Color', 'event_espresso'),
@@ -156,7 +217,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'default'              => '1',
                         'description'          => __('between 0 to 1', 'event_espresso'),
                     ),
-                    'table_bg_image'     => array(
+                    /*'table_bg_image'     => array(
                         'type'              => 'photo',
                         'label'         => __('Background Image', 'event_espresso'),
                         'default'       => '',
@@ -185,12 +246,12 @@ FLBuilder::register_module('EspressoTableModule', array(
                             'repeat-y'      => __('Repeat Y', 'event_espresso'),
                             'no-repeat'     => __('No Repeat', 'event_espresso'),
                         )
-                    ),
+                    ),*/
 					
                 )
             ),
             'table_border'       => array(
-                'title'             => __('Table Border', 'event_espresso'),
+                'title'             => __('Container  Border', 'event_espresso'),
                 'fields'            => array(
                     'table_border_width'      => array(
                         'type'          => 'text',
