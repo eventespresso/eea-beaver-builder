@@ -4,7 +4,6 @@
  * $settings The module's settings.
 */
 
-
 .fl-node-<?php echo $id; ?> .ee-table-content {
 	max-width: 100%;
 }

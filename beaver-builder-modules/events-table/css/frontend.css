@@ -3,7 +3,7 @@
  * will be applied to all module instances.
  */
 
-.ee-table-input.input-small {
+.ee-table-input .input-small {
     width: 46px !important;
 }
 
@@ -21,16 +21,24 @@
 	height: 100%;
 }
 
-.ee-table-content .event-title,
-.ee-table-content .event-description {
+.ee-table-content .events-table-title,
+.ee-table-content .events-table-description {
 	position: relative;
 }
 
-.ee-table-content .espresso_event_type-single-event form {
-	position: relative;
+
+.espresso-table ul,
+.espresso-table ul > li,
+.ee-table-view-datetime-list,
+.ee-table-view-datetime-list li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.ee-table-content .espresso_event_type-single-event {
-	width: 100% !important;
+.espresso-table ul > li:before,
+.ee-table-view-datetime-list li:before {
+    content: '';
+    content: none;
+    margin: 0;
 }
-
