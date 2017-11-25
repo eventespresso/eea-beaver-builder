@@ -43,7 +43,7 @@
 }
 <?php } ?>
 
-<?php if( $settings->title_field ) { ?>
+<?php if( !empty($settings->table_title) ) { ?>
     .fl-node-<?php echo $id; ?> .events-table-title {
         <?php if( $settings->title_color ) { ?>
         color: #<?php echo $settings->title_color; ?>;
@@ -59,24 +59,25 @@
         text-align: <?php echo $settings->title_alignment; ?>;
         <?php } ?>
     }
-<?php } ?>
+<?php }
 
-.fl-node-<?php echo $id; ?> .events-table-description {
-    <?php if( $settings->description_font_family['family'] != 'Default' ) { ?>
-    <?php FLBuilderFonts::font_css( $settings->description_font_family ); ?>
-    <?php } ?>
-    <?php if( $settings->description_color ) { ?>
-    color: #<?php echo $settings->description_color; ?>;
-    <?php } ?>
-	display: <?php echo ($settings->description_field == 'false') ? 'none' : 'block'; ?>;
-    <?php if( $settings->description_font_size ) { ?>
-    font-size: <?php echo $settings->description_font_size; ?>px;
-    <?php } ?>
-    <?php if( $settings->description_alignment ) { ?>
-    text-align: <?php echo $settings->description_alignment; ?>;
-    <?php } ?>
-}
-
+if( !empty($settings->table_description) ) { ?>
+    .fl-node-<?php echo $id; ?> .events-table-description {
+        <?php if( $settings->description_font_family['family'] != 'Default' ) { ?>
+        <?php FLBuilderFonts::font_css( $settings->description_font_family ); ?>
+        <?php } ?>
+        <?php if( $settings->description_color ) { ?>
+        color: #<?php echo $settings->description_color; ?>;
+        <?php } ?>
+    	display: <?php echo ($settings->description_field == 'false') ? 'none' : 'block'; ?>;
+        <?php if( $settings->description_font_size ) { ?>
+        font-size: <?php echo $settings->description_font_size; ?>px;
+        <?php } ?>
+        <?php if( $settings->description_alignment ) { ?>
+        text-align: <?php echo $settings->description_alignment; ?>;
+        <?php } ?>
+    }
+<?php }?>
 
 .fl-node-<?php echo $id; ?> .espresso-table .odd {
     <?php if( $settings->rows_odd_background ) { ?>background: #<?php echo $settings->rows_odd_background; ?>;<?php } ?>

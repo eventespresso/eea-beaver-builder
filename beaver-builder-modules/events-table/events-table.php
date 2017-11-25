@@ -179,25 +179,13 @@ FLBuilder::register_module('EspressoTableModule', array(
                 )
             ),
             'row_style' => array(
-                'title' => __( 'Rows', 'bb-powerpack' ),
+                'title' => __( 'Rows', 'event_espresso' ),
                 'fields'    => array(
-                    'rows_background'     => array(
-                        'type'          => 'color',
-                        'default'          => 'ffffff',
-                        'label'         => __('Background Color', 'bb-powerpack'),
-                        'help'          => __('Change the table row background color', 'bb-powerpack'),
-                        'show_reset'    => true,
-                        'preview'   => array(
-                            'type'      => 'css',
-                            'selector'  => '.espresso-table tbody tr',
-                            'property'  => 'background'
-                        )
-                    ),
                     'rows_even_background'     => array(
                         'type'          => 'color',
                         'default'          => 'ffffff',
-                        'label'         => __('Even Rows Background Color', 'bb-powerpack'),
-                        'help'          => __('Change the tables even rows background color', 'bb-powerpack'),
+                        'label'         => __('Even Rows Background Color', 'event_espresso'),
+                        'help'          => __('Change the tables even rows background color', 'event_espresso'),
                         'show_reset'    => true,
                         'preview'   => array(
                             'type'      => 'css',
@@ -208,8 +196,8 @@ FLBuilder::register_module('EspressoTableModule', array(
                     'rows_odd_background'     => array(
                         'type'          => 'color',
                         'default'          => 'ffffff',
-                        'label'         => __('Odd Rows Background Color', 'bb-powerpack'),
-                        'help'          => __('Change the tables odd rows background color', 'bb-powerpack'),
+                        'label'         => __('Odd Rows Background Color', 'event_espresso'),
+                        'help'          => __('Change the tables odd rows background color', 'event_espresso'),
                         'show_reset'    => true,
                         'preview'   => array(
                             'type'      => 'css',
