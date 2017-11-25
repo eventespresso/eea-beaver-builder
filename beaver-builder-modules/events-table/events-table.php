@@ -48,7 +48,7 @@ FLBuilder::register_module('EspressoTableModule', array(
             //Table Details
             'table_settings'     => array(
                 'title'             => __('Table Details', 'event_espresso'),
-                'fields'            => array(
+                'fields'            => array( // Section Fields
                     
                     'table_title'      => array(
                         'type'          => 'text',
@@ -109,56 +109,6 @@ FLBuilder::register_module('EspressoTableModule', array(
                             'property'  => 'text-align'
                         )
                     ),
-                    
-                    
-                    
-                    
-                    //NOT WORKING FOR SOME REASON
-                    /*'category_filter'    => array(
-                        'type'                      => 'select',
-                        'label'                     => __('Category Filter', 'event_espresso'),
-                        'default'                   => 'true',
-                        'options'                   => array(
-                            'true'                  => __('Show', 'event_espresso'),
-                            'false'                => __('Hide', 'event_espresso'),
-                        ),
-                    ),
-                    'table_search'    => array(
-                        'type'                      => 'select',
-                        'label'                     => __('Table Search', 'event_espresso'),
-                        'default'                   => 'true',
-                        'options'                   => array(
-                            'true'                  => __('Show', 'event_espresso'),
-                            'false'                => __('Hide', 'event_espresso'),
-                        ),
-                    ),
-                    'table_sort'    => array(
-                        'type'                      => 'select',
-                        'label'                     => __('Table Sorting', 'event_espresso'),
-                        'default'                   => 'true',
-                        'options'                   => array(
-                            'true'                  => __('Show', 'event_espresso'),
-                            'false'                => __('Hide', 'event_espresso'),
-                        ),
-                    ),
-                    'table_paging'    => array(
-                        'type'                      => 'select',
-                        'label'                     => __('Table Paging', 'event_espresso'),
-                        'default'                   => 'true',
-                        'options'                   => array(
-                            'true'                  => __('Show', 'event_espresso'),
-                            'false'                => __('Hide', 'event_espresso'),
-                        ),
-                    ),
-                    'table_striping'    => array(
-                        'type'                      => 'select',
-                        'label'                     => __('Table Striping', 'event_espresso'),
-                        'default'                   => 'true',
-                        'options'                   => array(
-                            'true'                  => __('Show', 'event_espresso'),
-                            'false'                => __('Hide', 'event_espresso'),
-                        ),
-                    ),*/
                     'show_expired'    => array(
                         'type'                      => 'select',
                         'label'                     => __('Expired Events', 'event_espresso'),
@@ -171,8 +121,10 @@ FLBuilder::register_module('EspressoTableModule', array(
                     'limit'    => array(
                         'type'                 => 'text',
                         'label'                => __('Limit', 'event_espresso'),
-                        //'class'                => 'bb-gf-input input-small',
-                        'default'              => '1000',
+                        'class'                => 'ee-table-input input-small',
+                        'default'              => '20',
+                        'maxlength'     => '4',
+                        'size'          => '4',
                         'description'          => __('between 1 to 1000', 'event_espresso'),
                     ),
 
@@ -216,26 +168,6 @@ FLBuilder::register_module('EspressoTableModule', array(
             'container_setting'      => array( // Section
                 'title'         => __('Container Background', 'event_espresso'), // Section Title
                 'fields'        => array( // Section Fields
-                    
-                    //NOT WORKING
-                    /*'table_bg_type'      => array(
-                        'type'          => 'select',
-                        'label'         => __('Background Type', 'event_espresso'),
-                        'default'       => 'color',
-                        'options'       => array(
-                            'color'   => __('Color', 'event_espresso'),
-                            'image'     => __('Image', 'event_espresso'),
-                        ),
-                        'toggle'    => array(
-                            'color' => array(
-                                'fields'    => array('table_bg_color', 'table_background_opacity')
-                            ),
-                            'image' => array(
-                                'fields'    => array('table_bg_image','table_bg_size','table_bg_repeat', 'event_bg_overlay', 'event_bg_overlay_opacity')
-                            )
-                        )
-                    ),*/
-
                     'container_bg_color'     => array(
                         'type'          => 'color',
                         'label'         => __('Background Color', 'event_espresso'),
@@ -254,38 +186,6 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'default'              => '1',
                         'description'          => __('between 0 to 1', 'event_espresso'),
                     ),
-
-                    //NOT WORKING
-                    /*'table_bg_image'     => array(
-                        'type'              => 'photo',
-                        'label'         => __('Background Image', 'event_espresso'),
-                        'default'       => '',
-						'show_remove'	=> true,
-                        'preview'       => array(
-                            'type'      => 'css',
-                            'selector'  => '.ee-table-content',
-                            'property'  => 'background-image'
-                        )
-                    ),
-                    'table_bg_size'      => array(
-                        'type'          => 'select',
-                        'label'         => __('Background Size', 'event_espresso'),
-                        'default'       => 'cover',
-                        'options'       => array(
-                            'contain'   => __('Contain', 'event_espresso'),
-                            'cover'     => __('Cover', 'event_espresso'),
-                        )
-                    ),
-                    'table_bg_repeat'    => array(
-                        'type'          => 'select',
-                        'label'         => __('Background Repeat', 'event_espresso'),
-                        'default'       => 'no-repeat',
-                        'options'       => array(
-                            'repeat-x'      => __('Repeat X', 'event_espresso'),
-                            'repeat-y'      => __('Repeat Y', 'event_espresso'),
-                            'no-repeat'     => __('No Repeat', 'event_espresso'),
-                        )
-                    ),*/
 					
                 )
             ),
@@ -457,6 +357,145 @@ FLBuilder::register_module('EspressoTableModule', array(
                     ),
                 )
             ),
+            'header_typography' => array(
+                'title' =>  __('Header', 'event_espresso'),
+                'fields'    => array(
+                    'header_font'          => array(
+                        'type'          => 'font',
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
+                        ),
+                        'label'         => __('Font', 'event_espresso'),
+                        'preview'         => array(
+                            'type'            => 'font',
+                            'selector'        => '.espresso-table thead tr th'
+                        )
+                    ),
+                    'header_font_size'     => array(
+                        'type'          => 'text',
+                        'label'         => __('Font Size', 'event_espresso'),
+                        'default'       => 'default',
+                        'class'                => 'ee-table-input input-small',
+                        'default'              => '',
+                        'preview'              => array(
+                            'type'             => 'css',
+                            'selector'         => '.espresso-table thead tr th',
+                            'property'         => 'font-size',
+                            'unit'             => 'px'
+                        )
+                    ),
+                    
+                    'header_font_color'     => array(
+                        'type'          => 'color',
+                        'default'          => '',
+                        'label'         => __('Text Color', 'event_espresso'),
+                        'help'          => __('Change the table header font color', 'event_espresso'),
+                        'show_reset'    => true,
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table thead tr th',
+                            'property'  => 'color'
+                        )
+                    ),
+                    'header_text_transform' => array(
+                        'type'      => 'select',
+                        'label'     => __('Text Transform', 'event_espresso'),
+                        'default'   => 'none',
+                        'options'       => array(
+                            'none'          => __('None', 'event_espresso'),
+                            'lowercase'     => __('lowercase', 'event_espresso'),
+                            'uppercase'     => __('UPPERCASE', 'event_espresso'),
+                        ),
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table thead tr th',
+                            'property'  => 'text-transform'
+                        )
+                    ),
+                )
+            ),
+            'rows_typography'   => array(
+                'title' => __('Rows', 'event_espresso'),
+                'fields'    => array(
+                    'row_font'          => array(
+                        'type'          => 'font',
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
+                        ),
+                        'label'         => __('Font', 'event_espresso'),
+                        'preview'         => array(
+                            'type'            => 'font',
+                            'selector'        => '.espresso-table tbody tr td'
+                        )
+                    ),
+                    'row_font_size'     => array(
+                        'type'          => 'text',
+                        'label'         => __('Font Size', 'event_espresso'),
+                        'default'       => 'default',
+                        'class'                => 'ee-table-input input-small',
+                        'default'              => '',
+                        'preview'              => array(
+                            'type'             => 'css',
+                            'selector'         => '.espresso-table tbody tr td',
+                            'property'         => 'font-size',
+                            'unit'             => 'px'
+                        )
+                    ),
+                    'rows_font_color'     => array(
+                        'type'          => 'color',
+                        'default'       => '',
+                        'label'         => __('Text Color', 'bb-powerpack'),
+                        'help'          => __('Change the table row text color', 'event_espresso'),
+                        'show_reset'    => true,
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'color'
+                        )
+                    ),
+                    'rows_font_even'     => array(
+                        'type'          => 'color',
+                        'default'       => '',
+                        'label'         => __('Even Rows Text Color', 'event_espresso'),
+                        'help'          => __('Change the tables even rows text color', 'event_espresso'),
+                        'show_reset'    => true,
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table .even td',
+                            'property'  => 'color'
+                        )
+                    ),
+                    'rows_font_odd'     => array(
+                        'type'          => 'color',
+                        'default'       => '',
+                        'label'         => __('Odd Rows Text Color', 'bb-powerpack'),
+                        'help'          => __('Change the tables odd rows text color', 'event_espresso'),
+                        'show_reset'    => true,
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table .odd td',
+                            'property'  => 'color'
+                        )
+                    ),
+                    'rows_text_transform' => array(
+                        'type'      => 'select',
+                        'label'     => __('Text Transform', 'event_espresso'),
+                        'default'   => 'none',
+                        'options'       => array(
+                            'none'          => __('None', 'event_espresso'),
+                            'lowercase'     => __('lowercase', 'event_espresso'),
+                            'uppercase'     => __('UPPERCASE', 'event_espresso'),
+                        ),
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'text-transform'
+                        )
+                    ),
+                )
+            )
         )
     ),
 
