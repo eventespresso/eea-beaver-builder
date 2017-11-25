@@ -3,7 +3,7 @@
  * will be applied to all module instances.
  */
 
-.ee-table-input .input-small {
+.ee-table-input.input-small {
     width: 46px !important;
 }
 
@@ -42,3 +42,36 @@
     content: none;
     margin: 0;
 }
+
+
+table.espresso-table {
+  empty-cells: show;
+  max-width: 100%;
+  width: 100%;
+}
+
+.espresso-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Structure */
+
+.espresso-table {
+  border: 0;
+  padding: 0;
+}
+
+.espresso-table th,
+.espresso-table td {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5em .7em;
+}
+
+.espresso-table thead tr:first-child th {
+  padding-top: .9em;
+  padding-bottom: .7em;
+}
+
