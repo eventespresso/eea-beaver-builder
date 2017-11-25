@@ -357,6 +357,47 @@ FLBuilder::register_module('EspressoTableModule', array(
                     ),
                 )
             ),
+            'link_typography'       => array( // Section
+                'title'         => __('Register Link', 'event_espresso'), // Section Title
+                'fields'        => array( // Section Fields
+                    'link_font_family' => array(
+                        'type'          => 'font',
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
+                        ),
+                        'label'         => __('Font', 'event_espresso'),
+                        'preview'         => array(
+                            'type'            => 'font',
+                            'selector'        => '.espresso-table .a_register_link'
+                        )
+                    ),
+                    'link_font_size'   => array(
+                        'type'          => 'text',
+                        'label'         => __('Font Size', 'event_espresso'),
+                        'description'   => 'px',
+                        'class'         => 'ee-table-input input-small',
+                        'default'       => 'default',
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table .a_register_link',
+                            'property'  => 'font-size',
+                            'unit'      => 'px'
+                        )
+                    ),
+                    'link_font_color'       => array(
+                        'type'          => 'color',
+                        'label'         => __('Color', 'event_espresso'),
+                        'default'       => '',
+                        'show_reset'    => true,
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table .a_register_link',
+                            'property'  => 'color'
+                        )
+                    ),
+                )
+            ),
             'header_typography' => array(
                 'title' =>  __('Header', 'event_espresso'),
                 'fields'    => array(

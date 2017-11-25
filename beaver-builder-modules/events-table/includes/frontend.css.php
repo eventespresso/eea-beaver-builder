@@ -6,6 +6,7 @@
 <?php
 $headerfamily = $settings->header_font;
 $rowfamily = $settings->row_font;
+$linkfamily = $settings->link_font_family;
 ?>
 .fl-node-<?php echo $id; ?> .ee-table-content {
 	max-width: 100%;
@@ -83,7 +84,14 @@ if( !empty($settings->table_description) ) { ?>
     color: #<?php echo $settings->rows_font_color; ?>;
     text-transform: <?php echo $settings->rows_text_transform; ?>;
     text-align: <?php echo $settings->rows_text_alignment; ?>;
-    
+}
+
+.fl-node-<?php echo $id; ?> .espresso-table .a_register_link {
+    <?php if($settings->link_font_size != 'default') { ?>
+        font-size: <?php echo $settings->link_font_size; ?>px;
+    <?php } ?>
+    <?php if( $linkfamily['family'] != 'Default' ) { ?><?php FLBuilderFonts::font_css( $linkfamily ); ?><?php } ?>
+    color: #<?php echo $settings->link_font_color; ?>;
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table .odd {
