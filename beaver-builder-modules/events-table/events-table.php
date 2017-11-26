@@ -494,7 +494,7 @@ FLBuilder::register_module('EspressoTableModule', array(
             ),
             
             'header_typography' => array(
-                'title' =>  __('Header', 'event_espresso'),
+                'title' =>  __('Table Header', 'event_espresso'),
                 'fields'    => array(
                     'header_font'          => array(
                         'type'          => 'font',

@@ -83,11 +83,21 @@ if( !empty($settings->table_description) ) { ?>
         <?php if( $settings->tools_font_size ) { ?>
         font-size: <?php echo $settings->tools_font_size; ?>px;
         <?php } ?>
+        float:left;
+        margin-left: 20px;
+        display: inline-flex;
 }
 
 .fl-node-<?php echo $id; ?> .category-filter > select {
     font-weight: normal;
-    font-size: 80%;
+    font-size: 90%;
+    margin-left: 10px;
+}
+
+.fl-node-<?php echo $id; ?> input#filter {
+    height: 27px;
+    float right;
+    margin-left: 10px;
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table thead tr th {
