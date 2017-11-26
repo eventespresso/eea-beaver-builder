@@ -67,6 +67,7 @@ if( !empty($settings->table_description) ) { ?>
         <?php } ?>
     }
 <?php }?>
+
 .fl-node-<?php echo $id; ?> .espresso-table thead tr th {
     <?php if($settings->header_font_size != 'default') { ?>
         font-size: <?php echo $settings->header_font_size; ?>px;
