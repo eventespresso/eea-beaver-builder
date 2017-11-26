@@ -27,17 +27,14 @@
 		//  limit = 1000, show_expired = FALSE, month = NULL, category_slug = NULL, category_filter = false, 
 		//  order_by = start_date, sort = ASC, 
 		//  template_file = espresso-events-table-template-toggle.template.php (creates a table with two columns and a toggle to expand the row) (users can upload custom templates to wp-content/uploads/espresso/templates/)
-		
-		//NOT WORKING PARAMS
-		//(Might not be working because the styles and scripts are not loaded when BB cache is built)
-		//category_filter='.$settings->category_filter.'
-		//table_search='.$settings->table_search.'
-		//table_sort='.$settings->table_sort.'
-		//table_paging=true
-		//table_striping = '.$settings->table_striping.'
+
+
+		if ($settings->month != ''){
+			$month = 'month='.$settings->month;
+		}
 
 			echo '<div class="events-table">';
-		    	echo do_shortcode( '[ESPRESSO_EVENTS_TABLE_TEMPLATE footable=false category_filter=false show_expired='.$settings->show_expired.' limit='.$settings->limit.']' );
+		    	echo do_shortcode( '[ESPRESSO_EVENTS_TABLE_TEMPLATE footable='.$settings->footable.' category_filter='.$settings->category_filter.' table_sort='.$settings->table_sort.' table_search='.$settings->table_search.' table_paging = '.$settings->table_paging.' show_expired='.$settings->show_expired.' limit='.$settings->limit.' '.$month.']' );
 		    echo '</div>';
 		   
 		?>

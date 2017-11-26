@@ -30,8 +30,8 @@ class EspressoTableModule extends FLBuilderModule {
      * @method enqueue_scripts
      */
     public function enqueue_scripts()
-    {
-        //add_filter('FHEE__EED_Events_Table__load_tckt_slctr_assets', '__return_true');
+    {        
+        
     }
 }
 
@@ -109,30 +109,26 @@ FLBuilder::register_module('EspressoTableModule', array(
                             'property'  => 'text-align'
                         )
                     ),
-                    'show_expired'    => array(
-                        'type'                      => 'select',
-                        'label'                     => __('Expired Events', 'event_espresso'),
-                        'default'                   => 'true',
-                        'options'                   => array(
-                            'true'                  => __('Show', 'event_espresso'),
-                            'false'                => __('Hide', 'event_espresso'),
-                        ),
-                    ),
-                    'limit'    => array(
-                        'type'                 => 'text',
-                        'label'                => __('Limit', 'event_espresso'),
-                        'class'                => 'ee-table-input input-small',
-                        'default'              => '20',
-                        'maxlength'     => '4',
-                        'size'          => '4',
-                        'description'          => __('between 1 to 1000', 'event_espresso'),
-                    ),
 
                 )
             ),
             'row_style' => array(
                 'title' => __( 'Rows', 'event_espresso' ),
                 'fields'    => array(
+                    
+                    'header_background'     => array(
+                        'type'          => 'color',
+                        'default'          => 'ffffff',
+                        'label'         => __('Rows Background Color', 'event_espresso'),
+                        'help'          => __('Change the tables rows background color', 'event_espresso'),
+                        'show_reset'    => true,
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table thead tr th',
+                            'property'  => 'background'
+                        )
+                    ),
+
                     'rows_even_background'     => array(
                         'type'          => 'color',
                         'default'          => 'ffffff',
@@ -635,6 +631,117 @@ FLBuilder::register_module('EspressoTableModule', array(
                     ),
                 )
             )
+        )
+    ),
+
+    'extras'       => array( // Tab
+        'title'         => __('Extras', 'event_espresso'), // Tab title
+        'sections'      => array( // Tab Sections
+            'extra_settings'      => array( // Section
+                'title'         => __('Extra Settings', 'event_espresso'), // Section Title
+                'fields'        => array( // Section Fields
+                    'footable'     => array(
+                        'type'          => 'select',
+                        'label'         => __('Show Tools', 'event_espresso'),
+                        'help'          => __('Displays category filter, paging, and search tools.', 'event_espresso'),
+                        'default'       => 'true',
+                        'options'       => array(
+                            'true'      => __('Yes', 'event_espresso'),
+                            'false'     => __('No', 'event_espresso'),
+                        ),
+                        'toggle' => array(
+                            'true'      => array(
+                                'fields'  => array('category_filter', 'table_search', 'table_sort', 'table_paging'),
+                            ),
+                            /*'false'    => array(
+                                'fields'    => array('title_field', 'description_field')
+                            )*/
+                        )
+                    ),
+                    'category_filter'   => array(
+                        'type'          => 'select',
+                        'label'         => __('Category Filter', 'event_espresso'),
+                        'default'       => 'true',
+                        'options'       => array(
+                            'true'      => __('Show', 'event_espresso'),
+                            'false'     => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_search'      => array(
+                        'type'          => 'select',
+                        'label'         => __('Table Search', 'event_espresso'),
+                        'default'       => 'true',
+                        'options'       => array(
+                            'true'      => __('Show', 'event_espresso'),
+                            'false'     => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_sort' => array(
+                        'type'          => 'select',
+                        'label'         => __('Table Sort', 'event_espresso'),
+                        'default'       => 'true',
+                        'options'       => array(
+                            'true'      => __('Show', 'event_espresso'),
+                            'false'     => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'table_paging' => array(
+                        'type'          => 'select',
+                        'label'         => __('Table Paging', 'event_espresso'),
+                        'default'       => 'true',
+                        'options'       => array(
+                            'true'      => __('Show', 'event_espresso'),
+                            'false'     => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    
+                )
+            ),
+            'Extra Settings'      => array( // Section
+                'title'         => __('Extra Settings', 'event_espresso'), // Section Title
+                'fields'        => array( // Section Fields
+                    'show_expired'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Expired Events', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'limit'    => array(
+                        'type'                 => 'text',
+                        'label'                => __('Limit', 'event_espresso'),
+                        'class'                => 'ee-table-input input-small',
+                        'default'              => '20',
+                        'maxlength'     => '4',
+                        'size'          => '4',
+                        'description'          => __('between 1 to 1000', 'event_espresso'),
+                    ),
+                    'month'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Month', 'event_espresso'),
+                        'help'                      => __('Displays a single month.', 'event_espresso'),
+                        'default'                   => '',
+                        'options'                   => array(
+                            ''                      => __('All', 'event_espresso'),
+                            'january'               => __('January', 'event_espresso'),
+                            'february'              => __('February', 'event_espresso'),
+                            'march'                 => __('March', 'event_espresso'),
+                            'april'                 => __('April', 'event_espresso'),
+                            'may'                   => __('May', 'event_espresso'),
+                            'june'                  => __('June', 'event_espresso'),
+                            'july'                  => __('July', 'event_espresso'),
+                            'august'                => __('August', 'event_espresso'),
+                            'september'             => __('September', 'event_espresso'),
+                            'october'               => __('October', 'event_espresso'),
+                            'november'              => __('November', 'event_espresso'),
+                            'december'              => __('December', 'event_espresso'),
+                        ),
+                    ),
+                )
+            ),
+            
         )
     ),
 
