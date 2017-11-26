@@ -1,4 +1,4 @@
-Evnet Espresso Beaver Builder Add-on
+Event Espresso Beaver Builder Add-on
 =========
 
 [![Latest Release](https://img.shields.io/github/tag/eventespresso/eea-beaver-builder.svg?style=flat&label=Latest%20Release)](https://github.com/eventespresso/eea-beaver-builder/releases)
