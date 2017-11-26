@@ -128,6 +128,18 @@ FLBuilder::register_module('EspressoTableModule', array(
                             'property'  => 'background'
                         )
                     ),
+                    'footer_background'     => array(
+                        'type'          => 'color',
+                        'default'          => '',
+                        'label'         => __('Footer Background Color', 'event_espresso'),
+                        'help'          => __('Change the tables rows background color', 'event_espresso'),
+                        'show_reset'    => true,
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tfoot td',
+                            'property'  => 'background'
+                        )
+                    ),
 
                     'rows_even_background'     => array(
                         'type'          => 'color',
@@ -291,7 +303,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                         'label'         => __('Border Width', 'event_espresso'),
                         'description'   => 'px',
                         'class'         => 'ee-table-input input-small',
-                        'default'       => 1,
+                        'default'       => 0,
                         'preview'       => array(
                             'type'      => 'css',
                             'selector'  => '.ee-table-content',
@@ -745,6 +757,24 @@ FLBuilder::register_module('EspressoTableModule', array(
             'Extra Settings'      => array( // Section
                 'title'         => __('Extra Settings', 'event_espresso'), // Section Title
                 'fields'        => array( // Section Fields
+                    /*'table_style'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Table Style', 'event_espresso'),
+                        'default'                   => 'standalone',
+                        'options'                   => array(
+                            'standalone'            => __('Standalone', 'event_espresso'),
+                            'metro'                 => __('Metro', 'event_espresso'),
+                        ),
+                    ),*/
+                    'template_file'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Table Type', 'event_espresso'),
+                        'default'                   => '',
+                        'options'                   => array(
+                            ''            => __('Default', 'event_espresso'),
+                            'espresso-events-table-template-toggle.template.php' => __('Expandable', 'event_espresso'),
+                        ),
+                    ),
                     'show_expired'    => array(
                         'type'                      => 'select',
                         'label'                     => __('Expired Events', 'event_espresso'),
