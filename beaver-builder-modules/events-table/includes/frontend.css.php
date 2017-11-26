@@ -68,6 +68,28 @@ if( !empty($settings->table_description) ) { ?>
     }
 <?php }?>
 
+/* Reset the label font weight */
+.fl-node-<?php echo $id; ?> .category-filter > label {
+    font-weight: normal;
+}
+
+.fl-node-<?php echo $id; ?> .events-table > p, .events-table > label {
+    <?php if( $settings->tools_font_family['family'] != 'Default' ) { ?>
+        <?php FLBuilderFonts::font_css( $settings->tools_font_family ); ?>
+        <?php } ?>
+        <?php if( $settings->tools_color ) { ?>
+        color: #<?php echo $settings->tools_color; ?>;
+        <?php } ?>
+        <?php if( $settings->tools_font_size ) { ?>
+        font-size: <?php echo $settings->tools_font_size; ?>px;
+        <?php } ?>
+}
+
+/*.fl-node-<?php echo $id; ?> .category-filter > select {
+    font-weight: normal;
+    font-size: 12px;
+}*/
+
 .fl-node-<?php echo $id; ?> .espresso-table thead tr th {
     <?php if( $settings->header_background ) { ?>
         background: #<?php echo $settings->header_background; ?>;
@@ -125,4 +147,8 @@ if( !empty($settings->table_description) ) { ?>
 
 .fl-node-<?php echo $id; ?> .espresso-table .even td {
     <?php if( $settings->rows_font_even ) { ?>color: #<?php echo $settings->rows_font_even; ?>;<?php } ?>
+}
+
+.fl-node-<?php echo $id; ?> .espresso-table tr th:nth-child(2), .fl-node-<?php echo $id; ?> .espresso-table td:nth-child(2) {
+  <?php if( $settings->show_venue == 'false' ) { ?>display: none;<?php } ?>
 }
