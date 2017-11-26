@@ -101,7 +101,7 @@ if( !empty($settings->table_description) ) { ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table thead tr th {
-    <?php if( $settings->header_background ) { ?>
+    <?php if( !empty($settings->header_background) ) { ?>
         background: #<?php echo $settings->header_background; ?>;
         <?php } ?>
     <?php if($settings->header_font_size != 'default') { ?>
@@ -144,19 +144,19 @@ if( !empty($settings->table_description) ) { ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table .odd {
-    <?php if( $settings->rows_odd_background ) { ?>background: #<?php echo $settings->rows_odd_background; ?>;<?php } ?>
+    <?php if( !empty($settings->rows_odd_background) ) { ?>background: #<?php echo $settings->rows_odd_background; ?>;<?php } ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table .odd td {
-    <?php if( $settings->rows_font_odd ) { ?>color: #<?php echo $settings->rows_font_odd; ?>;<?php } ?>
+    <?php if( !empty($settings->rows_font_odd) ) { ?>color: #<?php echo $settings->rows_font_odd; ?>;<?php } ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table .even {
-    <?php if( $settings->rows_even_background ) { ?>background: #<?php echo $settings->rows_even_background; ?>;<?php } ?>
+    <?php if( !empty($settings->rows_even_background) ) { ?>background: #<?php echo $settings->rows_even_background; ?>;<?php } ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table .even td {
-    <?php if( $settings->rows_font_even ) { ?>color: #<?php echo $settings->rows_font_even; ?>;<?php } ?>
+    <?php if( !empty($settings->rows_font_even) ) { ?>color: #<?php echo $settings->rows_font_even; ?>;<?php } ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table tr th:nth-child(2), .fl-node-<?php echo $id; ?> .espresso-table td:nth-child(2) {

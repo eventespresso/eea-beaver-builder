@@ -118,7 +118,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                     
                     'header_background'     => array(
                         'type'          => 'color',
-                        'default'          => 'ffffff',
+                        'default'          => '',
                         'label'         => __('Header Background Color', 'event_espresso'),
                         'help'          => __('Change the tables rows background color', 'event_espresso'),
                         'show_reset'    => true,
@@ -131,7 +131,7 @@ FLBuilder::register_module('EspressoTableModule', array(
 
                     'rows_even_background'     => array(
                         'type'          => 'color',
-                        'default'          => 'ffffff',
+                        'default'          => '',
                         'label'         => __('Even Rows Background Color', 'event_espresso'),
                         'help'          => __('Change the tables even rows background color', 'event_espresso'),
                         'show_reset'    => true,
@@ -143,7 +143,7 @@ FLBuilder::register_module('EspressoTableModule', array(
                     ),
                     'rows_odd_background'     => array(
                         'type'          => 'color',
-                        'default'          => 'ffffff',
+                        'default'          => '',
                         'label'         => __('Odd Rows Background Color', 'event_espresso'),
                         'help'          => __('Change the tables odd rows background color', 'event_espresso'),
                         'show_reset'    => true,
