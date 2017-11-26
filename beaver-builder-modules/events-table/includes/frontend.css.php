@@ -85,10 +85,10 @@ if( !empty($settings->table_description) ) { ?>
         <?php } ?>
 }
 
-/*.fl-node-<?php echo $id; ?> .category-filter > select {
+.fl-node-<?php echo $id; ?> .category-filter > select {
     font-weight: normal;
-    font-size: 12px;
-}*/
+    font-size: 80%;
+}
 
 .fl-node-<?php echo $id; ?> .espresso-table thead tr th {
     <?php if( $settings->header_background ) { ?>
