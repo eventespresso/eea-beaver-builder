@@ -85,6 +85,19 @@ if( !empty($settings->table_description) ) { ?>
     color: #<?php echo $settings->rows_font_color; ?>;
     text-transform: <?php echo $settings->rows_text_transform; ?>;
     text-align: <?php echo $settings->rows_text_alignment; ?>;
+    vertical-align: <?php echo $settings->rows_vertical_alignment; ?>;
+    <?php if( $settings->rows_padding_top >= 0 ) { ?>
+    padding-top: <?php echo $settings->rows_padding_top; ?>px;
+    <?php } ?>
+    <?php if( $settings->rows_padding_right >= 0 ) { ?>
+    padding-right: <?php echo $settings->rows_padding['right']; ?>px;
+    <?php } ?>
+    <?php if( $settings->rows_padding_bottom >= 0 ) { ?>
+    padding-bottom: <?php echo $settings->rows_padding['bottom']; ?>px;
+    <?php } ?>
+    <?php if( $settings->rows_padding_left >= 0 ) { ?>
+    padding-left: <?php echo $settings->rows_padding['left']; ?>px;
+    <?php } ?>
 }
 
 .fl-node-<?php echo $id; ?> .espresso-table .a_register_link {

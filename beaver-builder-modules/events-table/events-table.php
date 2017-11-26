@@ -157,6 +157,104 @@ FLBuilder::register_module('EspressoTableModule', array(
                             'property'  => 'background'
                         )
                     ),
+                    'rows_padding_top'   => array(
+                        'type'      => 'text',
+                        'label'     => __( 'Top Padding', 'event_espresso' ),
+                        'description'   => 'px',
+                        'default'       => 10,
+                        'maxlength'     => 3,
+                        'size'          => 4,
+                        'placeholder'   =>  __('Top', 'event_espresso'),
+                        'tooltip'       => __( 'Top', 'event_espresso' ),
+                        'icon'          => 'fa-long-arrow-up',
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'padding-top',
+                            'unit'      => 'px'
+                         )
+                    ),
+                    'rows_padding_right'   => array(
+                        'type'      => 'text',
+                        'label'     => __( 'Right Padding', 'event_espresso' ),
+                        'description'   => 'px',
+                        'default'       => 10,
+                        'maxlength'     => 3,
+                        'size'          => 4,
+                        'placeholder'   =>  __('Rigth', 'event_espresso'),
+                        'tooltip'       => __( 'Right', 'event_espresso' ),
+                        'icon'          => 'fa-long-arrow-right',
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'padding-right',
+                            'unit'      => 'px'
+                         )
+                    ),
+                    'rows_padding_bottom'   => array(
+                        'type'      => 'text',
+                        'label'     => __( 'Bottom Padding', 'event_espresso' ),
+                        'description'   => 'px',
+                        'default'       => 10,
+                        'maxlength'     => 3,
+                        'size'          => 4,
+                        'placeholder'   =>  __('Bottom', 'event_espresso'),
+                        'tooltip'       => __( 'Bottom', 'event_espresso' ),
+                        'icon'          => 'fa-long-arrow-down',
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'padding-bottom',
+                            'unit'      => 'px'
+                         )
+                    ),
+                    'rows_padding_left'   => array(
+                        'type'      => 'text',
+                        'label'     => __( 'Left Padding', 'event_espresso' ),
+                        'description'   => 'px',
+                        'default'       => 10,
+                        'maxlength'     => 3,
+                        'size'          => 4,
+                        'placeholder'   =>  __('Left', 'event_espresso'),
+                        'tooltip'       => __( 'Left', 'event_espresso' ),
+                        'icon'          => 'fa-long-arrow-left',
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'padding-left',
+                            'unit'      => 'px'
+                         )
+                    ),
+                    'rows_text_alignment' => array(
+                        'type'      => 'select',
+                        'label'     => __('Horizontal Alignment', 'bb-powerpack'),
+                        'default'   => 'left',
+                        'options'       => array(
+                            'left'          => __('Left', 'bb-powerpack'),
+                            'center'         => __('Center', 'bb-powerpack'),
+                            'right'         => __('Right', 'bb-powerpack'),
+                        ),
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'text-align'
+                        )
+                    ),
+                    'rows_vertical_alignment' => array(
+                        'type'      => 'select',
+                        'label'     => __('Vertical Alignment', 'bb-powerpack'),
+                        'default'   => 'middle',
+                        'options'       => array(
+                            'top'          => __('Top', 'bb-powerpack'),
+                            'middle'         => __('Center', 'bb-powerpack'),
+                            'bottom'         => __('Bottom', 'bb-powerpack'),
+                        ),
+                        'preview'   => array(
+                            'type'      => 'css',
+                            'selector'  => '.espresso-table tbody tr td',
+                            'property'  => 'vertical-align'
+                        )
+                    ),
                 )
             ),
         ),
