@@ -51,10 +51,10 @@ FLBuilder::register_module('EspressoTicketModule', array(
                 'title'         => '', // Section Title
                 'fields'        => array( // Section Fields
                     'select_event_field' => array(
-                        'type'          => 'event-picker',
+                        'type'          => 'select',
                         'label'         => __('Select Event', 'event_espresso'),
                         'default'       => '',
-                        // 'options'       => array(),//espresso_module_event_titles()
+                         'options'       => 'espresso_module_event_titles'
                     ),
                 
                 )
