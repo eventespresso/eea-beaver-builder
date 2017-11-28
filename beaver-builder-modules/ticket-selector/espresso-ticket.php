@@ -22,7 +22,7 @@ class EspressoTicketModule extends FLBuilderModule {
             'url'           => EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_URL,
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
-            'icon'				=> 'editor-table.svg',
+            'icon'				=> 'megaphone.svg',
         ));
     }
 

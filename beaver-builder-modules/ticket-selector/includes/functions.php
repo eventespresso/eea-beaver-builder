@@ -19,6 +19,7 @@ function espresso_module_event_titles() {
     return $options;
 }
 
+
 /*
  * Hex to Rgba
  */

@@ -11,7 +11,7 @@
 
 .fl-node-<?php echo $id; ?> .pp-ee-content {
 	background-color: <?php echo $settings->event_bg_color ? espresso_hex2rgba('#' . $settings->event_bg_color, $settings->event_background_opacity) : 'transparent'; ?>;
-    <?php if( $settings->event_bg_image && $settings->form_bg_type == 'image' ) { ?>
+    <?php if( $settings->event_bg_image && $settings->event_bg_image == 'photo' ) { ?>
 	background-image: url('<?php echo $settings->event_bg_image_src; ?>');
     <?php } ?>
     <?php if( $settings->event_bg_size ) { ?>
@@ -46,7 +46,7 @@
 	<?php } ?>
 }
 
-<?php if( $settings->event_bg_image && $settings->form_bg_type == 'image' ) { ?>
+<?php if( $settings->event_bg_image && $settings->event_bg_type == 'photo' ) { ?>
 .fl-node-<?php echo $id; ?> .pp-ee-content:before {
 	background-color: <?php echo ( $settings->event_bg_overlay ) ? espresso_hex2rgba('#' . $settings->event_bg_overlay, $settings->event_bg_overlay_opacity / 100 ) : 'transparent'; ?>;
 }

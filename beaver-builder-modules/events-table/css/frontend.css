@@ -1,0 +1,77 @@
+/**
+ * This file should contain frontend styles that
+ * will be applied to all module instances.
+ */
+
+.ee-table-input.input-small {
+    width: 46px !important;
+}
+
+.ee-table-content {
+	position: relative;
+}
+
+.ee-table-content:before {
+	/*content: "";*/
+	display: block;
+	position: absolute;;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ee-table-content .events-table-title,
+.ee-table-content .events-table-description {
+	position: relative;
+}
+
+
+.espresso-table ul,
+.espresso-table ul > li,
+.ee-table-view-datetime-list,
+.ee-table-view-datetime-list li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.espresso-table ul > li:before,
+.ee-table-view-datetime-list li:before {
+    content: '';
+    content: none;
+    margin: 0;
+}
+
+
+table.espresso-table {
+  empty-cells: show;
+  max-width: 100%;
+  width: 100%;
+}
+
+.espresso-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Structure */
+
+.espresso-table {
+  border: 0;
+  padding: 0;
+}
+
+.espresso-table th,
+.espresso-table td {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5em .7em;
+}
+
+.espresso-table thead tr:first-child th {
+  padding-top: .9em;
+  padding-bottom: .7em;
+}
+
