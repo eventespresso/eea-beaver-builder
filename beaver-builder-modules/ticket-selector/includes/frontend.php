@@ -18,7 +18,7 @@ if ( $settings->select_event_field ) {
 		}
 
 ?>
-<div class="pp-ee-content">
+<div class="bb-ee-content">
 	<div class="espresso_event_type-single-event">
 			<?php 
 				//Date Above Title

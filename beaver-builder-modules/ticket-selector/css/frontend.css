@@ -7,11 +7,11 @@
     width: 46px !important;
 }
 
-.pp-ee-content {
+.bb-ee-content {
 	position: relative;
 }
 
-.pp-ee-content:before {
+.bb-ee-content:before {
 	content: "";
 	display: block;
 	position: absolute;;
@@ -21,16 +21,16 @@
 	height: 100%;
 }
 
-.pp-ee-content .event-title,
-.pp-ee-content .event-description {
+.bb-ee-content .event-title,
+.bb-ee-content .event-description {
 	position: relative;
 }
 
-.pp-ee-content .espresso_event_type-single-event form {
+.bb-ee-content .espresso_event_type-single-event form {
 	position: relative;
 }
 
-.pp-ee-content .espresso_event_type-single-event {
+.bb-ee-content .espresso_event_type-single-event {
 	width: 100% !important;
 }
 

@@ -237,7 +237,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.bb-ee-content',
                             'property'  => 'background-color'
                         )
                     ),
@@ -255,7 +255,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
 						'show_remove'	=> true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.bb-ee-content',
                             'property'  => 'background-image'
                         )
                     ),
@@ -304,7 +304,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'default'       => 0,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.bb-ee-content',
                             'property'  => 'border-width',
                             'unit'      => 'px'
                         )
@@ -316,7 +316,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.bb-ee-content',
                             'property'  => 'border-color'
                         )
                     ),
@@ -331,7 +331,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         ),
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.bb-ee-content',
                             'property'  => 'border-style'
                         )
                     ),
@@ -348,7 +348,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'class'         => 'bb-gf-input input-small',
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.pp-ee-content',
+                            'selector'  => '.bb-ee-content',
                             'property'  => 'border-radius',
                             'unit'      => 'px'
                         )
@@ -371,7 +371,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'icon'		=> 'fa-long-arrow-up',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.bb-ee-content',
                                     'property'  => 'padding-top',
                                     'unit'      => 'px'
                                 )
@@ -383,7 +383,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'icon'		=> 'fa-long-arrow-down',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.bb-ee-content',
                                     'property'  => 'padding-bottom',
                                     'unit'      => 'px'
                                 )
@@ -395,7 +395,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'icon'		=> 'fa-long-arrow-left',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.bb-ee-content',
                                     'property'  => 'padding-left',
                                     'unit'      => 'px'
                                 )
@@ -407,7 +407,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'icon'		=> 'fa-long-arrow-right',
                                 'preview'       => array(
                                     'type'      => 'css',
-                                    'selector'  => '.pp-ee-content',
+                                    'selector'  => '.bb-ee-content',
                                     'property'  => 'padding-right',
                                     'unit'      => 'px'
                                 )

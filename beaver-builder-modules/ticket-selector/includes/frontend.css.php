@@ -5,11 +5,11 @@
 */
 
 
-.fl-node-<?php echo $id; ?> .pp-ee-content .espresso_event_type-single-event {
+.fl-node-<?php echo $id; ?> .bb-ee-content .espresso_event_type-single-event {
 	max-width: 100%;
 }
 
-.fl-node-<?php echo $id; ?> .pp-ee-content {
+.fl-node-<?php echo $id; ?> .bb-ee-content {
 	background-color: <?php echo $settings->event_bg_color ? espresso_hex2rgba('#' . $settings->event_bg_color, $settings->event_background_opacity) : 'transparent'; ?>;
     <?php if( $settings->event_bg_image && $settings->event_bg_image == 'photo' ) { ?>
 	background-image: url('<?php echo $settings->event_bg_image_src; ?>');
@@ -47,7 +47,7 @@
 }
 
 <?php if( $settings->event_bg_image && $settings->event_bg_type == 'photo' ) { ?>
-.fl-node-<?php echo $id; ?> .pp-ee-content:before {
+.fl-node-<?php echo $id; ?> .bb-ee-content:before {
 	background-color: <?php echo ( $settings->event_bg_overlay ) ? espresso_hex2rgba('#' . $settings->event_bg_overlay, $settings->event_bg_overlay_opacity / 100 ) : 'transparent'; ?>;
 }
 <?php } ?>
@@ -171,7 +171,7 @@
       
 }
 
-.fl-node-<?php echo $id; ?> .pp-ee-content .event-tickets .ticket-selector-submit-btn, .fl-node-<?php echo $id; ?> .pp-ee-content .event-tickets .ticket-selector-submit-btn-wrap {
+.fl-node-<?php echo $id; ?> .bb-ee-content .event-tickets .ticket-selector-submit-btn, .fl-node-<?php echo $id; ?> .bb-ee-content .event-tickets .ticket-selector-submit-btn-wrap {
     <?php 
     //EE4 Core styles are overriding everything so I had to resort to this
     if( $settings->button_alignment ) { 
