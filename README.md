@@ -8,8 +8,10 @@ Event Espresso Beaver Builder Add-on
 [![Event Espresso Addon](https://img.shields.io/badge/Addon%20For-Event%20Espresso-blue.svg)](https://github.com/eventespresso/event-espresso-core)
 [![Minimum EE Core Version:](https://img.shields.io/badge/Minimum%20EE%20core%20ver-4.9.37.p-red.svg)](https://github.com/eventespresso/event-espresso-core/releases/tag/4.9.37.p)
 
-This plugin adds [Event Espresso 4](https://eventespresso.com) options to [Beaver Builder](https://www.wpbeaverbuilder.com/?fla=1882). Here's a [short video](https://youtu.be/iYmhj_chMVc) showing how to add an event ticket selector to a page using Beaver Builder.
+This plugin adds [Event Espresso 4](https://eventespresso.com/?utm_source=github&utm_medium=referral&utm_campaign=beaver_builder_event_espresso) options to [Beaver Builder](https://www.wpbeaverbuilder.com/?fla=1882). This version adds an event ticket selector, events list, and integrates with the EE4 Table View add-on by allowing you add event functionlaity to any page using Beaver Builder.
 
+Videos:
+1. [Ticket Selector](https://youtu.be/iYmhj_chMVc)
 
 
 > Note, there is **no usage support** provided here.  Please read the entire contents of this document before posting any issues.  If we encounter issues that give evidence of this document not having been read the issue _will be closed_.
@@ -17,7 +19,7 @@ This plugin adds [Event Espresso 4](https://eventespresso.com) options to [Beave
 | **Some Links**|     |
 |---- | --- |
 **Support License** | Support for this add-on is provided through this repository. Please create a Github issue if you have questions or discover bugs or plugin incompatibilities. 
-**Newsletter** | Be the first to know when we ship new features ... [signup here](https://eventespresso.com/newsletter/).
+**Newsletter** | Be the first to know when we ship new features ... [signup here](https://eventespresso.com/newsletter/?utm_source=github&utm_medium=referral&utm_campaign=beaver_builder_event_espresso).
 **Community Chat** | Join a real-time community chat group for professionals that are leading the way in events from event management, event technology and event marketing to work-life balance. [Join the Discussion →](https://eventsmart.com/contact/community-chat/?utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_read_me&utm_content=community+chat)
 
 ## Developers
@@ -35,7 +37,7 @@ We follow a set pattern for releases and development of all our official add-ons
 
 ### Testing
 For all testers of this add-on, please take note of the following when reporting issues.
-1. There is a difference between a feature and a bug, we consider a bug is something that reveals brokenness in intended functionality.  A feature, is something beyond intended functionality.  To help determine the difference, think about your issue like this, "I know A does C, however I *wish* it did D."  If you find yourself saying that, its a feature.  This repository is **not** the place to suggest a new feature UNLESS you've already got a pull request to implement it (see pull requests section below).  Info on sponsoring new features can [be found here](https://eventespresso.com/rich-features/sponsor-new-features/).  If you aren't sure whether something is a feature or bug feel free to post the issue - however we give priority to bug issues here.
+1. There is a difference between a feature and a bug, we consider a bug is something that reveals brokenness in intended functionality.  A feature, is something beyond intended functionality.  To help determine the difference, think about your issue like this, "I know A does C, however I *wish* it did D."  If you find yourself saying that, its a feature.  This repository is **not** the place to suggest a new feature UNLESS you've already got a pull request to implement it (see pull requests section below).  Info on sponsoring new features can [be found here](https://eventespresso.com/rich-features/sponsor-new-features/?utm_source=github&utm_medium=referral&utm_campaign=beaver_builder_event_espresso).  If you aren't sure whether something is a feature or bug feel free to post the issue - however we give priority to bug issues here.
 2. UI/UX issues may be considered a bug but not if it requires a major change in design.  Feel free to report things you find confusing or needing improvement however reports accompanied by a pull request will likely get faster attention.
 3. Report your issue as clearly as possible.  By "clear" we mean:
 
@@ -59,4 +61,4 @@ Here's how we deal with pull requests for our repo:
 3. We greatly appreciate any pull-requests submitted for consideration, but please understand we are very selective in what we decide to include in our official add-ons.  If the "feature" is something that expands too much on our design decisions for this add-on then we may suggest you develop your pull request into a different add-on for EE.
 
 
-You may find [our post on contributing to open source software](https://eventespresso.com/2017/02/5-tips-for-contributing-to-open-source-software-like-event-espresso/) helpful.
+You may find [our post on contributing to open source software](https://eventespresso.com/2017/02/5-tips-for-contributing-to-open-source-software-like-event-espresso/?utm_source=github&utm_medium=referral&utm_campaign=beaver_builder_event_espresso) helpful.
