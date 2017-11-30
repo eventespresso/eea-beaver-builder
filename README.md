@@ -14,7 +14,6 @@ This plugin adds [Event Espresso](https://eventespresso.com) to [Beaver Builder]
 | **Some Links**|     |
 |---- | --- |
 **Support License** | Support for this add-on is provided through this repository. Please create a Github issue if you have questions or discover bugs or plugin incompatibilities. 
-
 **Newsletter** | Be the first to know when we ship new features ... [signup here](https://eventespresso.com/newsletter/).
 **Community Chat** | Join a real-time community chat group for professionals that are leading the way in events from event management, event technology and event marketing to work-life balance. [Join the Discussion →](https://eventsmart.com/contact/community-chat/?utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_read_me&utm_content=community+chat)
 
