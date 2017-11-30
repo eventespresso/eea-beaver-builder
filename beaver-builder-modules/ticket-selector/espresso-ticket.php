@@ -583,7 +583,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'type'          => 'text',
                         'label'         => __('Font Size', 'event_espresso'),
                         'description'   => 'px',
-                        'class'         => 'bb-gf-input input-small',
+                        'class'         => 'bb-ee-input input-small',
                         'default'       => '',
                         'preview'       => array(
                             'type'      => 'css',
