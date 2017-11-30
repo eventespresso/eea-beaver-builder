@@ -109,6 +109,7 @@ if( !empty($settings->list_description) ) { ?>
     <?php if( $settings->event_description_alignment ) { ?>
     text-align: <?php echo $settings->event_description_alignment; ?>;
     <?php } ?>
+    padding-left:20px;
 }
 
 /* Event Dates */
