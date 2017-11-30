@@ -8,7 +8,9 @@ Event Espresso Beaver Builder Add-on
 [![Event Espresso Addon](https://img.shields.io/badge/Addon%20For-Event%20Espresso-blue.svg)](https://github.com/eventespresso/event-espresso-core)
 [![Minimum EE Core Version:](https://img.shields.io/badge/Minimum%20EE%20core%20ver-4.9.37.p-red.svg)](https://github.com/eventespresso/event-espresso-core/releases/tag/4.9.37.p)
 
-This plugin adds [Event Espresso](https://eventespresso.com) to [Beaver Builder](https://www.wpbeaverbuilder.com/?fla=1882).
+This plugin adds [Event Espresso 4](https://eventespresso.com) options to [Beaver Builder](https://www.wpbeaverbuilder.com/?fla=1882). [Short video](https://youtu.be/iYmhj_chMVc) showing how to add an event ticket selector to a page using Beaver Builder.
+
+
 
 > Note, there is **no usage support** provided here.  Please read the entire contents of this document before posting any issues.  If we encounter issues that give evidence of this document not having been read the issue _will be closed_.
 
