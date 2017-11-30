@@ -13,14 +13,14 @@ This add-on adds [Event Espresso](https://eventespresso.com) to [Beaver Builder]
 
 | **Some Links**|     |
 |---- | --- |
-**Support License** | Support for this add-on is not provided through this repository.  For support you can purchase a [Premium Support License](https://eventespresso.com/product/eea-beaver-builder?ee_ver=ee4&utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_readme&utm_content=premium+support+license). 
-**Documentation** | [View Documentation →](https://eventespresso.com/wiki/eea-beaver-builder?utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_readme&utm_content=view+addon+documentation)
+**Support License** | Support for this add-on is provided through this repository. Please create a Github issue if you have questions or discover bugs or plugin incompatibilities. 
+
 **Newsletter** | Be the first to know when we ship new features ... [signup here](https://eventespresso.com/newsletter/).
 **Community Chat** | Join a real-time community chat group for professionals that are leading the way in events from event management, event technology and event marketing to work-life balance. [Join the Discussion →](https://eventsmart.com/contact/community-chat/?utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_read_me&utm_content=community+chat)
 
 ## Developers
 **This is the full version of the add-on** and provides its full feature set. The repository is provided to assist you with evaluating whether it will solve your use-case.  
-> We ask if you are using this to provide a solution for clients that you (or your client) [purchase a support license](https://eventespresso.com/product/eea-beaver-builder?ee_ver=ee4&utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_readme&utm_content=premium+support+license) for this add-on.
+> We ask if you are using this to provide a solution for clients that you (or your client) [purchase a support license](https://eventespresso.com/pricing/?ee_ver=ee4&utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_readme&utm_content=premium+support+license) for Event Espresso 4.
 
 **No Usage Support** is provided in this repository.
 
