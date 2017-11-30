@@ -346,7 +346,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.event-header h2.entry-title',
+                            'selector'  => '.event-header h2.entry-title a',
                             'property'  => 'color'
                         )
                     ),
