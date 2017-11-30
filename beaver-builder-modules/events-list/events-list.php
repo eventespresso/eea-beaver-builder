@@ -277,7 +277,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
         'title'         => __('Typography', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
             'title_typography'       => array( // Section
-                'title'         => __('Title', 'event_espresso'), // Section Title
+                'title'         => __('List Title', 'event_espresso'), // Section Title
                 'fields'        => array( // Section Fields
                     'title_font_family' => array(
                         'type'          => 'font',
@@ -318,7 +318,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 )
             ),
             'description_typography'    => array(
-                'title' => __('Description', 'event_espresso'),
+                'title' => __('List Description', 'event_espresso'),
                 'fields'    => array(
                     'description_font_family' => array(
                         'type'          => 'font',
@@ -400,7 +400,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 )
             ),
             'event_description_typography'    => array(
-                'title' => __('Description', 'event_espresso'),
+                'title' => __('Event Description', 'event_espresso'),
                 'fields'    => array(
                     'event_description_font_family' => array(
                         'type'          => 'font',
@@ -441,7 +441,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 )
             ),
             'date_typography'   => array(
-                'title' => __( 'Date', 'event_espresso' ),
+                'title' => __( 'Event Date', 'event_espresso' ),
                 'fields'    => array(
                     'date_font_family' => array(
                         'type'          => 'font',
@@ -452,7 +452,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
                             'type'            => 'font',
-                            'selector'        => '.event-date'
+                            'selector'        => '.event-datetimes'
                         )
                     ),
                     'date_font_size'      => array(
@@ -463,7 +463,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                         'default'       => '',
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.event-date',
+                            'selector'  => '.event-datetimes',
                             'property'  => 'font-size',
                             'unit'      => 'px'
                         )
@@ -475,7 +475,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                         'show_reset'    => true,
                         'preview'           => array(
                             'type'          => 'css',
-                            'selector'      => '.event-date',
+                            'selector'      => '.event-datetimes .ee-event-datetimes-ul li',
                             'property'      => 'color'
                         )
                     ),

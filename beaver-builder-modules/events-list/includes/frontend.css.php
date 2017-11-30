@@ -95,7 +95,7 @@ if( !empty($settings->list_description) ) { ?>
     text-align: <?php echo $settings->event_title_alignment; ?>;
     <?php } ?>
 }
-.fl-node-<?php echo $id; ?> .events-list-description {
+.fl-node-<?php echo $id; ?> .espresso-events-list .event-content > p {
     <?php if( $settings->event_description_font_family['family'] != 'Default' ) { ?>
     <?php FLBuilderFonts::font_css( $settings->event_description_font_family ); ?>
     <?php } ?>
@@ -115,12 +115,13 @@ if( !empty($settings->list_description) ) { ?>
 .fl-node-<?php echo $id; ?> .event-datetimes .ee-event-datetimes-ul li {
     list-style-type: none;
     margin: 0 0 1em;
-}
-
-.fl-node-<?php echo $id; ?> .event-content .event-datetimes {
     <?php if( $settings->date_text_color ) { ?>
     color: #<?php echo $settings->date_text_color; ?> !important;
     <?php } ?>
+}
+
+.fl-node-<?php echo $id; ?> .event-content .event-datetimes {
+    
     <?php if( $settings->date_font_size ) { ?>
     font-size: <?php echo $settings->date_font_size; ?>px;
     <?php } ?>
