@@ -7,7 +7,7 @@
      * two parameters, the module slug (same as the folder name)
      * and an object containing the helper methods and properties.
      */
-    FLBuilder._registerModuleHelper('pp-espresso-events-table', {
+    FLBuilder._registerModuleHelper('pp-espresso-eventslist', {
 
         /**
          * The 'rules' property is where you setup

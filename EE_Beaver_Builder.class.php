@@ -11,6 +11,8 @@ define('EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_PATH', EE_BEAVER_BUILDER_MODULE
 define('EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_URL', EE_BEAVER_BUILDER_MODULE_URL . 'ticket-selector' . DS);
 define('EE_BEAVER_BUILDER_EVENTS_TABLE_MODULE_PATH', EE_BEAVER_BUILDER_MODULE_PATH . 'events-table' . DS);
 define('EE_BEAVER_BUILDER_EVENTS_TABLE_MODULE_URL', EE_BEAVER_BUILDER_MODULE_URL . 'events-table' . DS);
+define('EE_BEAVER_BUILDER_EVENTS_LIST_MODULE_PATH', EE_BEAVER_BUILDER_MODULE_PATH . 'events-list' . DS);
+define('EE_BEAVER_BUILDER_EVENTS_LIST_MODULE_URL', EE_BEAVER_BUILDER_MODULE_URL . 'events-list' . DS);
 define('EE_BEAVER_BUILDER_ADMIN', EE_BEAVER_BUILDER_PATH . 'admin' . DS . 'beaver_builder' . DS);
 
 
@@ -100,6 +102,7 @@ Class  EE_Beaver_Builder extends EE_Addon
     public static function init_beaver_builder_module()
     {
         require_once 'beaver-builder-modules/ticket-selector/espresso-ticket.php';
+        require_once 'beaver-builder-modules/events-list/events-list.php';
         if (class_exists('EE_Events_Table_Template')) {
             require_once 'beaver-builder-modules/events-table/events-table.php';
         }
