@@ -155,7 +155,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 'fields'        => array( // Section Fields
                     'template_info'    => array(
                         'type'                      => 'additional-layout-options',
-                        'label'                     => '<p><strong>'.__('Additional Layout Options', 'event_espresso').'</strong></p><p>'.sprintf( esc_html__('%sClick here%s to manage a wider range of event list layout options.', 'event_espresso'),'<em><a href="?page=espresso_events&action=template_settings">','</a></em>').'</p>',
+                        'label'                     => '<p><strong>'.__('Additional Layout Options', 'event_espresso').'</strong></p><p>'.sprintf( esc_html__('%sClick here%s to manage a wider range of event list layout options.', 'event_espresso'),'<em><a href="'.admin_url( 'admin.php?page=espresso_events&action=template_settings' ).'">','</a></em>').'</p>',
                     ),
                 )
             ),
