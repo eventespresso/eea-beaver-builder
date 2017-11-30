@@ -4,6 +4,7 @@ Event Espresso Beaver Builder Add-on
 [![Latest Release](https://img.shields.io/github/tag/eventespresso/eea-beaver-builder.svg?style=flat&label=Latest%20Release)](https://github.com/eventespresso/eea-beaver-builder/releases)
 [![Travis](https://travis-ci.org/eventespresso/eea-beaver-builder.svg?branch=master)](https://travis-ci.org/eventespresso/eea-beaver-builder)
 [![License](https://img.shields.io/badge/License-GPLv2-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![Beaver Builder Addon](https://img.shields.io/badge/Addon%20For-Event%20Espresso-orange.svg)](https://www.wpbeaverbuilder.com/?fla=1882)
 [![Event Espresso Addon](https://img.shields.io/badge/Addon%20For-Event%20Espresso-blue.svg)](https://github.com/eventespresso/event-espresso-core)
 [![Minimum EE Core Version:](https://img.shields.io/badge/Minimum%20EE%20core%20ver-4.9.37.p-red.svg)](https://github.com/eventespresso/event-espresso-core/releases/tag/4.9.37.p)
 
