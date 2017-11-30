@@ -109,10 +109,57 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                             'property'  => 'text-align'
                         )
                     ),
-
+                    'show_expired'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Expired Events', 'event_espresso'),
+                        'default'                   => 'true',
+                        'options'                   => array(
+                            'true'                  => __('Show', 'event_espresso'),
+                            'false'                => __('Hide', 'event_espresso'),
+                        ),
+                    ),
+                    'limit'    => array(
+                        'type'                 => 'text',
+                        'label'                => __('Limit', 'event_espresso'),
+                        'class'                => 'ee-table-input input-small',
+                        'default'              => '20',
+                        'maxlength'     => '4',
+                        'size'          => '4',
+                        'description'          => __('between 1 to 1000', 'event_espresso'),
+                    ),
+                    'month'    => array(
+                        'type'                      => 'select',
+                        'label'                     => __('Month', 'event_espresso'),
+                        'help'                      => __('Displays a single month.', 'event_espresso'),
+                        'default'                   => '',
+                        'options'                   => array(
+                            ''                      => __('All', 'event_espresso'),
+                            'january'               => __('January', 'event_espresso'),
+                            'february'              => __('February', 'event_espresso'),
+                            'march'                 => __('March', 'event_espresso'),
+                            'april'                 => __('April', 'event_espresso'),
+                            'may'                   => __('May', 'event_espresso'),
+                            'june'                  => __('June', 'event_espresso'),
+                            'july'                  => __('July', 'event_espresso'),
+                            'august'                => __('August', 'event_espresso'),
+                            'september'             => __('September', 'event_espresso'),
+                            'october'               => __('October', 'event_espresso'),
+                            'november'              => __('November', 'event_espresso'),
+                            'december'              => __('December', 'event_espresso'),
+                        ),
+                    ),
                 )
             ),
-            
+            'list_templates'    => array( // Section
+                'title'         => __('Template Settings', 'event_espresso'), // Section Title
+                'fields'        => array( // Section Fields
+                    'template_info'    => array(
+                        'type'                      => 'additional-layout-options',
+                        'label'                     => '<p><strong>'.__('Additional Layout Options', 'event_espresso').'</strong></p><p>'.sprintf( esc_html__('%sClick here%s to manage a wider range of event list layout options.', 'event_espresso'),'<em><a href="?page=espresso_events&action=template_settings">','</a></em>').'</p>',
+                    ),
+                )
+            ),
+        
         ),
 
     ),
