@@ -16,11 +16,12 @@ Feature Videos:
 3. Grid View (Coming Soon)
 4. Table View (Coming Soon)
 
-> Note, there is **no usage support** provided here.  Please read the entire contents of this document before posting any issues.  If we encounter issues that give evidence of this document not having been read the issue _will be closed_.
+> Note, there is **no usage support** provided here. Please read the entire contents of this document before posting any issues.  If we encounter issues that give evidence of this document not having been read the issue _will be closed_.
 
 | **Some Links**|     |
 |---- | --- |
-**Support License** | Support for this add-on is provided through this repository. Please create a Github issue if you have questions or discover bugs or plugin incompatibilities. 
+**Support** | Free support for this add-on is NOT provided through this repository. Please create a Github issue if you have questions or discover bugs or plugin incompatibilities. 
+**Paid Support* | [Support tokens](https://eventespresso.com/product/premium-support-token/?utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_readme&utm_content=premium+support+token) are available if you happen to get stuck. 
 **Newsletter** | Be the first to know when we ship new features ... [signup here](https://eventespresso.com/newsletter/?utm_source=github&utm_medium=referral&utm_campaign=beaver_builder_event_espresso).
 **Community Chat** | Join a real-time community chat group for professionals that are leading the way in events from event management, event technology and event marketing to work-life balance. [Join the Discussion →](https://eventsmart.com/contact/community-chat/?utm_source=github&utm_medium=link&utm_campaign=ee_addon_description_read_me&utm_content=community+chat)
 
