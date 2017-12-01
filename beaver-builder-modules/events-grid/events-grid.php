@@ -443,10 +443,10 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                     ),
                 )
             ),
-            'button_typography'       => array( // Section
-                'title'         => __('Button', 'event_espresso'), // Section Title
+            'link_typography'       => array( // Section
+                'title'         => __('Register Link', 'event_espresso'), // Section Title
                 'fields'        => array( // Section Fields
-                    'button_font_family' => array(
+                    'link_font_family' => array(
                         'type'          => 'font',
                         'default'       => array(
                             'family'        => 'Default',
@@ -458,7 +458,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                             'selector'        => '.ticket-selector-submit-btn'
                         )
                     ),
-                    'button_font_size'   => array(
+                    'link_font_size'   => array(
                         'type'          => 'text',
                         'label'         => __('Font Size', 'event_espresso'),
                         'description'   => 'px',
@@ -471,18 +471,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                             'unit'      => 'px'
                         )
                     ),
-                )
-            ),
-        )
-    ),
-    
-    'button_style'      => array(
-        'title'             => __('Button', 'event_espresso'),
-        'sections'          => array(
-            'button_bg'         => array(
-                'title'             => __('Colors', 'event_espresso'),
-                'fields'            => array(
-                    'button_text_color' => array(
+                    'link_text_color' => array(
                         'type'          => 'color',
                         'label'         => __('Text Color', 'event_espresso'),
                         'default'       => 'ffffff',
@@ -493,169 +482,65 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                             'property'  => 'color'
                         )
                     ),
-                    'button_hover_text_color'    => array(
-                        'type'                   => 'color',
-                        'label'                  => __('Text Color Hover', 'event_espresso'),
-                        'default'                => 'eeeeee',
-                        'show_reset'             => true,
-                        'preview'                => array(
-                            'type'               => 'css',
-                            'selector'           => '.ticket-selector-submit-btn:hover',
-                            'property'           => 'color'
-                        )
+                )
+            ),
+
+            'overlay_settings'       => array( // Section
+                'title'         => __('Hover', 'event_espresso'), // Section Title
+                'fields'        => array( // Section Fields
+                    'overlay_font_family' => array(
+                        'type'          => 'font',
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
+                        ),
+                        'label'         => __('Font', 'event_espresso'),
+                        /*'preview'         => array(
+                            'type'            => 'font',
+                            'selector'        => '.ee_overlay'
+                        )*/
                     ),
-                    'button_bg_color'   => array(
+                    'overlay_font_size'   => array(
+                        'type'          => 'text',
+                        'label'         => __('Font Size', 'event_espresso'),
+                        'description'   => 'px',
+                        'class'         => 'ee_overlay',
+                        'default'       => '',
+                        /*'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.ticket-selector-submit-btn',
+                            'property'  => 'font-size',
+                            'unit'      => 'px'
+                        )*/
+                    ),
+                    'overlay_text_color' => array(
                         'type'          => 'color',
-                        'label'         => __('Background Color', 'event_espresso'),
-                        'default'       => '333333',
+                        'label'         => __('Text Color', 'event_espresso'),
+                        'default'       => 'ffffff',
                         'show_reset'    => true,
                         'preview'       => array(
                             'type'      => 'css',
-                            'selector'  => '.ticket-selector-submit-btn',
-                            'property'  => 'background-color'
+                            'selector'  => '.ee_overlay',
+                            'property'  => 'color'
                         )
                     ),
-                    'button_background_opacity'    => array(
+                    'overlay_background_color' => array(
+                        'type'          => 'color',
+                        'label'         => __('Background Color', 'event_espresso'),
+                        'default'       => '5a5a5a',
+                        'show_reset'    => true,
+                        'preview'       => array(
+                            'type'      => 'css',
+                            'selector'  => '.ee_overlay',
+                            'property'  => 'color'
+                        )
+                    ),
+                    'overlay_background_opacity'    => array(
                         'type'                 => 'text',
                         'label'                => __('Background Opacity', 'event_espresso'),
-                        'class'                => 'ee-eventlist input-small',
+                        'class'                => 'ee-eventgrid-input input-small',
                         'default'              => '1',
-                        'preview'              => array(
-                            'type'             => 'css',
-                            'selector'         => '.ticket-selector-submit-btn',
-                            'property'         => 'opacity',
-                        )
-                    ),
-                    'button_hover_bg_color'    => array(
-                        'type'                 => 'color',
-                        'label'                => __('Background Color Hover', 'event_espresso'),
-                        'default'              => '',
-                        'show_reset'           => true,
-                        'preview'              => array(
-                            'type'             => 'css',
-                            'selector'         => '.ticket-selector-submit-btn:hover',
-                            'property'         => 'background-color'
-                        )
-                    ),
-                )
-            ),
-            'button_border'     => array(
-                'title'             => __('Border', 'event_espresso'),
-                'fields'            => array(
-                    'button_border_width'    => array(
-                        'type'               => 'text',
-                        'label'              => __('Border Width', 'event_espresso'),
-                        'description'        => 'px',
-                        'class'              => 'ee-eventlist input-small',
-                        'default'            => '1',
-                        'preview'            => array(
-                            'type'           => 'css',
-                            'selector'       => '.ticket-selector-submit-btn',
-                            'property'       => 'border-width',
-                            'unit'           => 'px'
-                        )
-                    ),
-                    'button_border_color'    => array(
-                        'type'               => 'color',
-                        'label'              => __('Border Color', 'event_espresso'),
-                        'default'            => '333333',
-                        'show_reset'         => true,
-                        'preview'            => array(
-                            'type'           => 'css',
-                            'selector'       => '.ticket-selector-submit-btn',
-                            'property'       => 'border-color'
-                        )
-                    ),
-                )
-            ),
-            'button_settings'       => array( // Section
-                'title'             => __('Size & Alignment', 'event_espresso'), // Section Title
-                'fields'            => array( // Section Fields
-                    'button_width'  => array(
-                        'type'      => 'select',
-                        'label'     => __('Full Width', 'event_espresso'),
-                        'default'   => 'false',
-                        'options'   => array(
-                            'true'  => __('Yes', 'event_espresso'),
-                            'false' => __('No', 'event_espresso'),
-                        ),
-                        'toggle'    => array(
-                            'false' => array(
-                                'fields'    => array('button_alignment')
-                            )
-                        )
-                    ),
-                    'button_alignment'  => array(
-                        'type'          => 'select',
-                        'label'         => __('Button Alignment', 'event_espresso'),
-                        'default'       => 'right',
-                        'options'       => array(
-                            'left'      => __('Left', 'event_espresso'),
-                            'center'    => __('Center', 'event_espresso'),
-                            'right'     => __('Right', 'event_espresso'),
-                        )
-                    ),
-                )
-            ),
-            'button_corners'        => array(
-                'title'                 => __('Corners & Padding', 'event_espresso'),
-                'fields'                => array(
-                    'button_border_radius'    => array(
-                        'type'                => 'text',
-                        'label'               => __('Round Corners', 'event_espresso'),
-                        'description'         => 'px',
-                        'class'               => 'ee-eventlist input-small',
-                        'default'             => '2',
-                        'preview'             => array(
-                            'type'            => 'css',
-                            'selector'        => '.ticket-selector-submit-btn',
-                            'property'        => 'border-radius',
-                            'unit'            => 'px'
-                        )
-                    ),
-                    'button_padding_top_bottom'    => array(
-                        'type'          => 'text',
-                        'label'         => __('Top/Bottom Padding', 'event_espresso'),
-                        'description'   => 'px',
-                        'class'         => 'ee-eventlist input-small',
-                        'default'       => '10',
-                        'preview'             => array(
-                            'type'            => 'css',
-                            'rules'           => array(
-                                array(
-                                    'selector'        => '.ticket-selector-submit-btn',
-                                    'property'        => 'padding-top',
-                                    'unit'            => 'px'
-                                ),
-                                array(
-                                    'selector'        => '.ticket-selector-submit-btn',
-                                    'property'        => 'padding-bottom',
-                                    'unit'            => 'px'
-                                ),
-                            ),
-                        )
-                    ),
-                    'button_padding_left_right'    => array(
-                        'type'          => 'text',
-                        'label'         => __('Left/Right Padding', 'event_espresso'),
-                        'description'   => 'px',
-                        'class'         => 'ee-eventlist-input input-small',
-                        'default'       => '10',
-                        'preview'             => array(
-                            'type'            => 'css',
-                            'rules'           => array(
-                                array(
-                                    'selector'        => '.ticket-selector-submit-btn',
-                                    'property'        => 'padding-left',
-                                    'unit'            => 'px'
-                                ),
-                                array(
-                                    'selector'        => '.ticket-selector-submit-btn',
-                                    'property'        => 'padding-right',
-                                    'unit'            => 'px'
-                                ),
-                            ),
-                        )
+                        'description'          => __('between 0 to 1', 'event_espresso'),
                     ),
                 )
             ),

@@ -7,6 +7,7 @@
 $headerfamily = $settings->header_font;
 $rowfamily = $settings->row_font;
 $linkfamily = $settings->link_font_family;
+$overlay_font_family = $settings->overlay_font_family;
 ?>
 .fl-node-<?php echo $id; ?> .ee-eventgrid-content {
 	max-width: 100%;
@@ -68,3 +69,19 @@ if( !empty($settings->grid_description) ) { ?>
     }
 <?php }?>
 
+.fl-node-<?php echo $id; ?> .espresso-events-grid .register-link {
+    <?php if($settings->link_font_size != 'default') { ?>
+        font-size: <?php echo $settings->link_font_size; ?>px;
+    <?php } ?>
+    <?php if( $linkfamily['family'] != 'Default' ) { ?><?php FLBuilderFonts::font_css( $linkfamily ); ?><?php } ?>
+    color: #<?php echo $settings->link_text_color; ?>;
+}
+
+.fl-node-<?php echo $id; ?> .ee_overlay {
+    <?php if($settings->overlay_font_size != 'default') { ?>
+        font-size: <?php echo $settings->overlay_font_size; ?>px;
+    <?php } ?>
+    <?php if( $overlay_font_family['family'] != 'Default' ) { ?><?php FLBuilderFonts::font_css( $overlay_font_family ); ?><?php } ?>
+    color: #<?php echo $settings->overlay_text_color; ?>;
+    background-color: <?php echo $settings->overlay_background_color ? espresso_hex2rgba('#' . $settings->overlay_background_color, $settings->overlay_background_opacity) : 'transparent'; ?>;
+}
