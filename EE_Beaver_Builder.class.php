@@ -13,6 +13,8 @@ define('EE_BEAVER_BUILDER_EVENTS_TABLE_MODULE_PATH', EE_BEAVER_BUILDER_MODULE_PA
 define('EE_BEAVER_BUILDER_EVENTS_TABLE_MODULE_URL', EE_BEAVER_BUILDER_MODULE_URL . 'events-table' . DS);
 define('EE_BEAVER_BUILDER_EVENTS_LIST_MODULE_PATH', EE_BEAVER_BUILDER_MODULE_PATH . 'events-list' . DS);
 define('EE_BEAVER_BUILDER_EVENTS_LIST_MODULE_URL', EE_BEAVER_BUILDER_MODULE_URL . 'events-list' . DS);
+define('EE_BEAVER_BUILDER_EVENTS_GRID_MODULE_PATH', EE_BEAVER_BUILDER_MODULE_PATH . 'events-grid' . DS);
+define('EE_BEAVER_BUILDER_EVENTS_GRID_MODULE_URL', EE_BEAVER_BUILDER_MODULE_URL . 'events-grid' . DS);
 define('EE_BEAVER_BUILDER_ADMIN', EE_BEAVER_BUILDER_PATH . 'admin' . DS . 'beaver_builder' . DS);
 
 
@@ -105,6 +107,9 @@ Class  EE_Beaver_Builder extends EE_Addon
         require_once 'beaver-builder-modules/events-list/events-list.php';
         if (class_exists('EE_Events_Table_Template')) {
             require_once 'beaver-builder-modules/events-table/events-table.php';
+        }
+        if (class_exists('EES_Espresso_Grid_Template')) {
+            require_once 'beaver-builder-modules/events-grid/events-grid.php';
         }
         
     }
