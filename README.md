@@ -8,7 +8,7 @@ Event Espresso Beaver Builder Add-on
 [![Event Espresso Addon](https://img.shields.io/badge/Addon%20For-Event%20Espresso-blue.svg)](https://github.com/eventespresso/event-espresso-core)
 [![Minimum EE Core Version:](https://img.shields.io/badge/Minimum%20EE%20core%20ver-4.9.37.p-red.svg)](https://github.com/eventespresso/event-espresso-core/releases/tag/4.9.37.p)
 
-![beaver builder_ better together](https://user-images.githubusercontent.com/235315/33503724-085f028e-d6a2-11e7-8af1-44e4d8349fd7.png
+![beaver builder_ better together](https://user-images.githubusercontent.com/235315/33503724-085f028e-d6a2-11e7-8af1-44e4d8349fd7.png)
 
 This plugin adds [Event Espresso 4](https://eventespresso.com/?utm_source=github&utm_medium=referral&utm_campaign=beaver_builder_event_espresso) event display and ticketing options to the [Beaver Builder](https://www.wpbeaverbuilder.com/?fla=1882) page builder plugin for WordPress. Currently, this version of the plugin adds a customizable event ticket selector and events list to Beaver Builder, while adding support for the Event Espresso 4 [Grid View](https://eventespresso.com/product/eea-events-grid-view-template/?utm_source=github&utm_medium=link&utm_campaign=ee_beaver_builder_addon_description_read_me&utm_content=grid+view) and [Table View](https://eventespresso.com/product/eea-events-table-view-template/?utm_source=github&utm_medium=link&utm_campaign=ee_beaver_builder_addon_description_read_me&utm_content=table+view) add-ons if either is installed. 
 
