@@ -16,7 +16,9 @@ Feature Videos:
 3. Grid View (Coming Soon)
 4. Table View (Coming Soon)
 
-> Note, there is **no usage support** provided here. Please read the entire contents of this document before posting any issues.  If we encounter issues that give evidence of this document not having been read the issue _will be closed_.
+Be sure to check out the [Beaver Builder Child Theme](http://espressothemes.com/downloads/barista-theme/) for Event Espresso.
+
+> Note, **usage support** is not provided here. Please read the entire contents of this document before posting any issues.  If we encounter issues that give evidence of this document not having been read the issue _will be closed_.
 
 | **Some Links**|     |
 |---- | --- |
