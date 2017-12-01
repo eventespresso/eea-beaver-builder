@@ -12,7 +12,7 @@ This plugin adds [Event Espresso 4](https://eventespresso.com/?utm_source=github
 
 Feature Videos:
 1. [Ticket Selector](https://youtu.be/iYmhj_chMVc)
-2. Events List (Coming Soon)
+2. [Events List](https://youtu.be/y55nmzQl2xc)
 3. Grid View (Coming Soon)
 4. Table View (Coming Soon)
 
