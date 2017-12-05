@@ -462,7 +462,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                         'type'          => 'text',
                         'label'         => __('Font Size', 'event_espresso'),
                         'description'   => 'px',
-                        'class'         => 'ee-eventlist-input input-small',
+                        'class'         => 'ee-eventgrid-input input-small',
                         'default'       => '',
                         'preview'       => array(
                             'type'      => 'css',

@@ -29,13 +29,17 @@
 		// category_slug = NULL
 		// order_by = start_date
 		// sort = ASC
-
+		$month = NULL;
 		if ($settings->month != ''){
 			$month = 'month='.$settings->month;
 		}
+		$button_text = NULL;
+		if ($settings->button_text != ''){
+			$button_text = 'button_text="'.$settings->button_text.'"';
+		}
 
 		echo '<div class="espresso-events-grid">';
-		echo do_shortcode( '[ESPRESSO_GRID_TEMPLATE button_text = "'.$settings->button_text.'" show_expired='.$settings->show_expired.' limit='.$settings->limit.' '.$month.']' );
+		echo do_shortcode( '[ESPRESSO_GRID_TEMPLATE '.$button_text.' show_expired='.$settings->show_expired.' limit='.$settings->limit.' '.$month.']' );
 		echo '</div>';
 		   
 		?>
