@@ -13,8 +13,8 @@ This plugin adds [Event Espresso 4](https://eventespresso.com/?utm_source=github
 Feature Videos:
 1. [Ticket Selector](https://youtu.be/iYmhj_chMVc)
 2. [Events List](https://youtu.be/y55nmzQl2xc)
-3. Grid View (Coming Soon)
-4. Table View (Coming Soon)
+3. Grid View (Now Available)
+4. Table View (Now Available)
 
 Be sure to check out the [Beaver Builder Child Theme](http://espressothemes.com/downloads/barista-theme/) for Event Espresso.
 
