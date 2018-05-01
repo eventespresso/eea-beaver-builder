@@ -23,3 +23,9 @@ General Styles
 @media only screen and (max-width: 480px) {
 }
 
+/*
+Hack to resolve https://github.com/eventespresso/eea-beaver-builder/issues/13
+ */
+.fl-editor-field .hide-if-no-js {
+	display: block;
+}

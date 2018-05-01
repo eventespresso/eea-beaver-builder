@@ -116,6 +116,8 @@ Class  EE_Beaver_Builder extends EE_Addon
         if (class_exists('EE_Calendar')) {
             require_once 'beaver-builder-modules/events-calendar/events-calendar.php';
         }
+        //this may not be the best spot to enqueue it, especially if the add-on gets de-registered
+	    add_action('wp_enqueue_scripts', array('EE_Beaver_Builder','enqueueJsAndCss'));
     }
 
 
@@ -131,6 +133,22 @@ Class  EE_Beaver_Builder extends EE_Addon
     public function after_registration()
     {
         // your logic here
+
+    }
+
+
+
+	/**
+	 * Enqueue global CSS and JS (ie, stuff we want to work on the front-end and back-end)
+	 */
+    public static function enqueueJsAndCss()
+    {
+	    wp_enqueue_style(
+		    'espresso_beaver_builder',
+		    EE_BEAVER_BUILDER_URL . '/css/espresso_beaver_builder.css',
+		    array(),
+		    EE_BEAVER_BUILDER_VERSION
+	    );
     }
 
 
