@@ -192,7 +192,7 @@
                 break;
                 case 'right':
                     ?>
-                    float: rigth;
+                    float: right;
                     text-align: right;
                     <?php
                 break;
