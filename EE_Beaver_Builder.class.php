@@ -1,4 +1,6 @@
-<?php if (! defined('EVENT_ESPRESSO_VERSION')) {
+<?php
+
+if (! defined('EVENT_ESPRESSO_VERSION')) {
     exit();
 }
 // define the plugin directory path and URL
@@ -28,9 +30,8 @@ define('EE_BEAVER_BUILDER_ADMIN', EE_BEAVER_BUILDER_PATH . 'admin' . DS . 'beave
  * @subpackage  eea-beaver-builder
  * @author      Brent Christensen
  */
-Class  EE_Beaver_Builder extends EE_Addon
+class EE_Beaver_Builder extends EE_Addon
 {
-
     /**
      * EE_Beaver_Builder constructor.
      * !!! IMPORTANT !!!
@@ -73,31 +74,31 @@ Class  EE_Beaver_Builder extends EE_Addon
         }
         // // register addon via Plugin API
         // EE_Register_Addon::register(
-        // 	'Beaver_Builder',
-        // 	array(
-        // 		'version'               => EE_BEAVER_BUILDER_VERSION,
-        // 		'plugin_slug'           => 'espresso_beaver_builder',
-        // 		'min_core_version'      => EE_BEAVER_BUILDER_CORE_VERSION_REQUIRED,
-        // 		'main_file_path'        => EE_BEAVER_BUILDER_PLUGIN_FILE,
-        // 		'namespace'             => array(
-        // 			'FQNS' => 'EventEspresso\NewAddon',
-        // 			'DIR'  => __DIR__,
-        // 		),
-        // 		'admin_path'            => EE_BEAVER_BUILDER_ADMIN,
-        // 		'admin_callback'        => '',
-        // 		'autoloader_paths'      => array(
-        // 			'EE_Beaver_Builder_Config'       => EE_BEAVER_BUILDER_PATH . 'EE_Beaver_Builder_Config.php',
-        // 			'Beaver_Builder_Admin_Page'      => EE_BEAVER_BUILDER_ADMIN . 'Beaver_Builder_Admin_Page.core.php',
-        // 			'Beaver_Builder_Admin_Page_Init' => EE_BEAVER_BUILDER_ADMIN . 'Beaver_Builder_Admin_Page_Init.core.php',
-        // 		),
-        // 		// if plugin update engine is being used for auto-updates. not needed if PUE is not being used.
-        // 		'pue_options'           => array(
-        // 			'pue_plugin_slug' => 'eea-beaver-builder',
-        // 			'plugin_basename' => EE_BEAVER_BUILDER_BASENAME,
-        // 			'checkPeriod'     => '24',
-        // 			'use_wp_update'   => false,
-        // 		),
-        // 	)
+        //  'Beaver_Builder',
+        //  array(
+        //      'version'               => EE_BEAVER_BUILDER_VERSION,
+        //      'plugin_slug'           => 'espresso_beaver_builder',
+        //      'min_core_version'      => EE_BEAVER_BUILDER_CORE_VERSION_REQUIRED,
+        //      'main_file_path'        => EE_BEAVER_BUILDER_PLUGIN_FILE,
+        //      'namespace'             => array(
+        //          'FQNS' => 'EventEspresso\NewAddon',
+        //          'DIR'  => __DIR__,
+        //      ),
+        //      'admin_path'            => EE_BEAVER_BUILDER_ADMIN,
+        //      'admin_callback'        => '',
+        //      'autoloader_paths'      => array(
+        //          'EE_Beaver_Builder_Config'       => EE_BEAVER_BUILDER_PATH . 'EE_Beaver_Builder_Config.php',
+        //          'Beaver_Builder_Admin_Page'      => EE_BEAVER_BUILDER_ADMIN . 'Beaver_Builder_Admin_Page.core.php',
+        //          'Beaver_Builder_Admin_Page_Init' => EE_BEAVER_BUILDER_ADMIN . 'Beaver_Builder_Admin_Page_Init.core.php',
+        //      ),
+        //      // if plugin update engine is being used for auto-updates. not needed if PUE is not being used.
+        //      'pue_options'           => array(
+        //          'pue_plugin_slug' => 'eea-beaver-builder',
+        //          'plugin_basename' => EE_BEAVER_BUILDER_BASENAME,
+        //          'checkPeriod'     => '24',
+        //          'use_wp_update'   => false,
+        //      ),
+        //  )
         // );
     }
 
@@ -116,8 +117,8 @@ Class  EE_Beaver_Builder extends EE_Addon
         if (class_exists('EE_Calendar')) {
             require_once 'beaver-builder-modules/events-calendar/events-calendar.php';
         }
-        //this may not be the best spot to enqueue it, especially if the add-on gets de-registered
-	    add_action('wp_enqueue_scripts', array('EE_Beaver_Builder','enqueueJsAndCss'));
+        // this may not be the best spot to enqueue it, especially if the add-on gets de-registered
+        add_action('wp_enqueue_scripts', array('EE_Beaver_Builder','enqueueJsAndCss'));
     }
 
 
@@ -133,26 +134,22 @@ Class  EE_Beaver_Builder extends EE_Addon
     public function after_registration()
     {
         // your logic here
-
     }
 
 
 
-	/**
-	 * Enqueue global CSS and JS (ie, stuff we want to work on the front-end and back-end)
-	 */
+    /**
+     * Enqueue global CSS and JS (ie, stuff we want to work on the front-end and back-end)
+     */
     public static function enqueueJsAndCss()
     {
-	    wp_enqueue_style(
-		    'espresso_beaver_builder',
-		    EE_BEAVER_BUILDER_URL . '/css/espresso_beaver_builder.css',
-		    array(),
-		    EE_BEAVER_BUILDER_VERSION
-	    );
+        wp_enqueue_style(
+            'espresso_beaver_builder',
+            EE_BEAVER_BUILDER_URL . '/css/espresso_beaver_builder.css',
+            array(),
+            EE_BEAVER_BUILDER_VERSION
+        );
     }
-
-
-
 }
 // End of file EE_Beaver_Builder.class.php
 // Location: wp-content/plugins/eea-beaver-builder/EE_Beaver_Builder.class.php

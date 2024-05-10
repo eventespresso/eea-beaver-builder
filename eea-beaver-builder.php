@@ -92,35 +92,38 @@ function espresso_beaver_builder_activation_error()
     deactivate_plugins(plugin_basename(EE_BEAVER_BUILDER_PLUGIN_FILE));
     ?>
     <div class="error">
-        <p><?php printf(__('Event Espresso Beaver Builder could not be activated. Please ensure that Event Espresso version %1$s or higher is running', 'event_espresso'),
-                EE_BEAVER_BUILDER_CORE_VERSION_REQUIRED); ?></p>
+        <p><?php printf(
+            __('Event Espresso Beaver Builder could not be activated. Please ensure that Event Espresso version %1$s or higher is running', 'event_espresso'),
+            EE_BEAVER_BUILDER_CORE_VERSION_REQUIRED
+        ); ?></p>
     </div>
     <?php
 }
 
-if (!function_exists('ee_bb_suppress_notices')){
-  function ee_bb_suppress_notices(){
-      if (class_exists('FLBuilderModel') && (FLBuilderModel::is_builder_enabled())){
-                  add_filter( 'FHEE__EE_Front_Controller__display_errors', '__return_false' );
-      }
-  }
+if (!function_exists('ee_bb_suppress_notices')) {
+    function ee_bb_suppress_notices()
+    {
+        if (class_exists('FLBuilderModel') && (FLBuilderModel::is_builder_enabled())) {
+                  add_filter('FHEE__EE_Front_Controller__display_errors', '__return_false');
+        }
+    }
   add_action('wp', 'ee_bb_suppress_notices', 1);
 }
 /*
  * Hex to Rgba
  */
-function espresso_hex2rgba( $hex, $opacity )
+function espresso_hex2rgba($hex, $opacity)
 {
-    $hex = str_replace( '#', '', $hex );
+    $hex = str_replace('#', '', $hex);
 
-    if ( strlen($hex) == 3 ) {
-        $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-        $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-        $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+    if (strlen($hex) == 3) {
+        $r = hexdec(substr($hex, 0, 1) . substr($hex, 0, 1));
+        $g = hexdec(substr($hex, 1, 1) . substr($hex, 1, 1));
+        $b = hexdec(substr($hex, 2, 1) . substr($hex, 2, 1));
     } else {
-        $r = hexdec(substr($hex,0,2));
-        $g = hexdec(substr($hex,2,2));
-        $b = hexdec(substr($hex,4,2));
+        $r = hexdec(substr($hex, 0, 2));
+        $g = hexdec(substr($hex, 2, 2));
+        $b = hexdec(substr($hex, 4, 2));
     }
     $rgba = array($r, $g, $b, $opacity);
 

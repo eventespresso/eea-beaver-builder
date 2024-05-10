@@ -3,8 +3,8 @@
 /**
  * @class PPEspressoEventsListModule
  */
-class EspressoEventsGridModule extends FLBuilderModule {
-
+class EspressoEventsGridModule extends FLBuilderModule
+{
     /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
@@ -17,12 +17,12 @@ class EspressoEventsGridModule extends FLBuilderModule {
             'name'          => esc_html__('Events Grid', 'event_espresso'),
             'description'   => esc_html__('An events grid view module for Event Espresso.', 'event_espresso'),
             'group'         => esc_html__('Event Espresso', 'event_espresso'),
-            'category'		=> esc_html__('Event Styler Modules', 'event_espresso'),
+            'category'      => esc_html__('Event Styler Modules', 'event_espresso'),
             'dir'           => EE_BEAVER_BUILDER_EVENTS_GRID_MODULE_PATH,
             'url'           => EE_BEAVER_BUILDER_EVENTS_GRID_MODULE_URL,
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
-            'icon'				=> 'schedule.svg',
+            'icon'              => 'schedule.svg',
         ));
     }
 
@@ -30,8 +30,7 @@ class EspressoEventsGridModule extends FLBuilderModule {
      * @method enqueue_scripts
      */
     public function enqueue_scripts()
-    {        
-        
+    {
     }
 }
 
@@ -45,23 +44,23 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
         'title'         => __('Grid', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
 
-            //Grid Details
+            // Grid Details
             'grid_settings'     => array(
                 'title'             => __('Grid Details', 'event_espresso'),
                 'fields'            => array( // Section Fields
-                    
+
                     'grid_title'      => array(
                         'type'          => 'text',
                         'label'         => __('Grid Title', 'event_espresso'),
                         'default'       => '',
                         'placeholder'   => 'Add a title to the events grid (optional).',
                         'connections'   => array('string'),
-						'preview'       => array(
+                        'preview'       => array(
                             'type'      => 'text',
                             'selector'  => '.events-grid-title'
                         )
                     ),
-                    
+
                     'grid_description'    => array(
                         'type'              => 'textarea',
                         'label'             => __('Grid Description', 'event_espresso'),
@@ -80,7 +79,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                         'label'         => __('Button Text', 'event_espresso'),
                         'default'       => '',
                         'placeholder'   => 'Title of the register now text (default: "Register Now").',
-                        //'connections'   => array('string'),
+                        // 'connections'   => array('string'),
                         /*'preview'       => array(
                             'type'      => 'text',
                             'selector'  => '.events-grid-title'
@@ -161,7 +160,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                         ),
                     ),
                 )
-            ),        
+            ),
         ),
 
     ),
@@ -182,14 +181,14 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                             'property'  => 'background-color'
                         )
                     ),
-					'container_background_opacity'    => array(
+                    'container_background_opacity'    => array(
                         'type'                 => 'text',
                         'label'                => __('Background Opacity', 'event_espresso'),
                         'class'                => 'ee-eventgrid-input input-small',
                         'default'              => '1',
                         'description'          => __('between 0 to 1', 'event_espresso'),
                     ),
-					
+
                 )
             ),
             'container_border'       => array(
@@ -219,14 +218,14 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                             'property'  => 'border-color'
                         )
                     ),
-                    'container_border_style' 	=> array(
+                    'container_border_style'    => array(
                         'type'          => 'select',
                         'label'         => __('Border Style', 'event_espresso'),
                         'default'       => 'solid',
-                        'options'		=> array(
-                            'solid'		=> __('Solid', 'event_espresso'),
-                       		'dashed'	=> __('Dashed', 'event_espresso'),
-                       		'dotted'	=> __('Dotted', 'event_espresso'),
+                        'options'       => array(
+                            'solid'     => __('Solid', 'event_espresso'),
+                            'dashed'    => __('Dashed', 'event_espresso'),
+                            'dotted'    => __('Dotted', 'event_espresso'),
                         ),
                         'preview'       => array(
                             'type'      => 'css',
@@ -239,7 +238,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
             'grid_container'        => array(
                 'title'                 => __('Corners & Padding', 'event_espresso'),
                 'fields'                => array(
-                    'container_border_radius' 	=> array(
+                    'container_border_radius'   => array(
                         'type'          => 'text',
                         'label'         => __('Round Corners', 'event_espresso'),
                         'description'   => 'px',
@@ -256,7 +255,7 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                     ),
                     'container_padding'   => array(
                         'type'          => 'text',
-                        'label'         => __( 'Padding', 'event_espresso' ),
+                        'label'         => __('Padding', 'event_espresso'),
                         'default'       => 10,
                         'maxlength'     => '3',
                         'size'          => '4',
@@ -268,13 +267,13 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                             'unit'      => 'px'
                         )
                     ),
-                    
+
                 )
             ),
-            
+
         )
     ),
-    
+
     'grid_typography'       => array( // Tab
         'title'         => __('Typography', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
@@ -283,9 +282,9 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                 'fields'        => array( // Section Fields
                     'title_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
@@ -324,9 +323,9 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                 'fields'    => array(
                     'description_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
@@ -401,9 +400,9 @@ FLBuilder::register_module('EspressoEventsGridModule', array(
                     ),
                 )
             ),
-            
+
             'date_typography'   => array(
-                'title' => __( 'Event Date', 'event_espresso' ),
+                'title' => __('Event Date', 'event_espresso'),
                 'fields'    => array(
                     'date_font_family' => array(
                         'type'          => 'font',

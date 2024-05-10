@@ -3,8 +3,8 @@
 /**
  * @class PPEspressoTicketModule
  */
-class EspressoTicketModule extends FLBuilderModule {
-
+class EspressoTicketModule extends FLBuilderModule
+{
     /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
@@ -17,12 +17,12 @@ class EspressoTicketModule extends FLBuilderModule {
             'name'          => esc_html__('Event Ticket', 'event_espresso'),
             'description'   => esc_html__('A ticket selector module for Event Espresso.', 'event_espresso'),
             'group'         => esc_html__('Event Espresso', 'event_espresso'),
-            'category'		=> esc_html__('Event Styler Modules', 'event_espresso'),
+            'category'      => esc_html__('Event Styler Modules', 'event_espresso'),
             'dir'           => EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_PATH,
             'url'           => EE_BEAVER_BUILDER_TICKET_SELECTOR_MODULE_URL,
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
-            'icon'				=> 'megaphone.svg',
+            'icon'              => 'megaphone.svg',
         ));
     }
 
@@ -56,10 +56,10 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'default'       => '',
                          'options'       => 'espresso_module_event_titles'
                     ),
-                
+
                 )
             ),
-            //Event Details
+            // Event Details
             'event_settings'     => array(
                 'title'             => __('Event Details', 'event_espresso'),
                 'fields'            => array(
@@ -95,7 +95,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'default'       => '',
                         'description'   => '',
                         'connections'   => array('string'),
-						'preview'       => array(
+                        'preview'       => array(
                             'type'      => 'text',
                             'selector'  => '.event-title'
                         )
@@ -150,8 +150,8 @@ FLBuilder::register_module('EspressoTicketModule', array(
 
         'date_settings'     => array(
                 'title'             => __('Event Dates', 'event_espresso'),
-                'fields'            => array( 
-                    //Let's show/hide the date
+                'fields'            => array(
+                    // Let's show/hide the date
                     'event_datetimes'   => array(
                         'type'          => 'select',
                         'label'         => __('Enable Event Dates', 'event_espresso'),
@@ -165,11 +165,11 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'fields'  => array('date_under_title', 'date_list', 'date_display', 'date_location'),
                             ),
                             'no'    => array(
-                                //'fields'    => array('title_field', 'description_field')
+                                // 'fields'    => array('title_field', 'description_field')
                             )
                         )
                     ),
-                  
+
 
                     'date_display'   => array(
                         'type'         => 'select',
@@ -189,7 +189,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'above'    => __('Above Title', 'event_espresso'),
                             'below'     => __('Below Title', 'event_espresso'),
                         ),
-                        
+
                     ),
 
                     'date_list' => array(
@@ -201,7 +201,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'false'        => __('Hide', 'event_espresso')
                         )
                     ),
-                    
+
 
                 )
             ),
@@ -241,7 +241,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'property'  => 'background-color'
                         )
                     ),
-					'event_background_opacity'    => array(
+                    'event_background_opacity'    => array(
                         'type'                 => 'text',
                         'label'                => __('Background Opacity', 'event_espresso'),
                         'class'                => 'bb-gf-input input-small',
@@ -252,7 +252,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                         'type'              => 'photo',
                         'label'         => __('Background Image', 'event_espresso'),
                         'default'       => '',
-						'show_remove'	=> true,
+                        'show_remove'   => true,
                         'preview'       => array(
                             'type'      => 'css',
                             'selector'  => '.bb-ee-content',
@@ -278,7 +278,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'no-repeat'     => __('No Repeat', 'event_espresso'),
                         )
                     ),
-					'event_bg_overlay'     => array(
+                    'event_bg_overlay'     => array(
                         'type'          => 'color',
                         'label'         => __('Background Overlay Color', 'event_espresso'),
                         'default'       => '',
@@ -320,14 +320,14 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'property'  => 'border-color'
                         )
                     ),
-                    'event_border_style' 	=> array(
+                    'event_border_style'    => array(
                         'type'          => 'select',
                         'label'         => __('Border Style', 'event_espresso'),
                         'default'       => 'solid',
-                        'options'		=> array(
-                            'solid'		=> __('Solid', 'event_espresso'),
-                       		'dashed'	=> __('Dashed', 'event_espresso'),
-                       		'dotted'	=> __('Dotted', 'event_espresso'),
+                        'options'       => array(
+                            'solid'     => __('Solid', 'event_espresso'),
+                            'dashed'    => __('Dashed', 'event_espresso'),
+                            'dotted'    => __('Dotted', 'event_espresso'),
                         ),
                         'preview'       => array(
                             'type'      => 'css',
@@ -340,7 +340,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
             'event_container'        => array(
                 'title'                 => __('Corners & Padding', 'event_espresso'),
                 'fields'                => array(
-                    'event_border_radius' 	=> array(
+                    'event_border_radius'   => array(
                         'type'          => 'text',
                         'label'         => __('Round Corners', 'event_espresso'),
                         'description'   => 'px',
@@ -353,9 +353,9 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'unit'      => 'px'
                         )
                     ),
-                    'event_padding' 	=> array(
-                        'type' 			=> 'pp-multitext',
-                        'label' 		=> __('Padding', 'event_espresso'),
+                    'event_padding'     => array(
+                        'type'          => 'pp-multitext',
+                        'label'         => __('Padding', 'event_espresso'),
                         'description'   => 'px',
                         'default'       => array(
                             'top' => 15,
@@ -363,12 +363,12 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'bottom' => 15,
                             'left' => 15,
                         ),
-                        'options' 		=> array(
+                        'options'       => array(
                             'top' => array(
                                 'maxlength' => 3,
                                 'placeholder'   =>  __('Top', 'event_espresso'),
                                 'tooltip'       => __('Top', 'event_espresso'),
-                                'icon'		=> 'fa-long-arrow-up',
+                                'icon'      => 'fa-long-arrow-up',
                                 'preview'       => array(
                                     'type'      => 'css',
                                     'selector'  => '.bb-ee-content',
@@ -380,7 +380,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'maxlength' => 3,
                                 'placeholder'   =>  __('Bottom', 'event_espresso'),
                                 'tooltip'       => __('Bottom', 'event_espresso'),
-                                'icon'		=> 'fa-long-arrow-down',
+                                'icon'      => 'fa-long-arrow-down',
                                 'preview'       => array(
                                     'type'      => 'css',
                                     'selector'  => '.bb-ee-content',
@@ -392,7 +392,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'maxlength' => 3,
                                 'placeholder'   =>  __('Left', 'event_espresso'),
                                 'tooltip'       => __('Left', 'event_espresso'),
-                                'icon'		=> 'fa-long-arrow-left',
+                                'icon'      => 'fa-long-arrow-left',
                                 'preview'       => array(
                                     'type'      => 'css',
                                     'selector'  => '.bb-ee-content',
@@ -404,7 +404,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 'maxlength' => 3,
                                 'placeholder'   =>  __('Right', 'event_espresso'),
                                 'tooltip'       => __('Right', 'event_espresso'),
-                                'icon'		=> 'fa-long-arrow-right',
+                                'icon'      => 'fa-long-arrow-right',
                                 'preview'       => array(
                                     'type'      => 'css',
                                     'selector'  => '.bb-ee-content',
@@ -413,11 +413,11 @@ FLBuilder::register_module('EspressoTicketModule', array(
                                 )
                             ),
                         ),
-                        'fallback'			=> array(
-                            'top'				=> 'event_padding',
-                            'bottom'			=> 'event_padding',
-                            'left'				=> 'event_padding',
-                            'right'				=> 'event_padding',
+                        'fallback'          => array(
+                            'top'               => 'event_padding',
+                            'bottom'            => 'event_padding',
+                            'left'              => 'event_padding',
+                            'right'             => 'event_padding',
                         )
                     )
                 )
@@ -477,8 +477,8 @@ FLBuilder::register_module('EspressoTicketModule', array(
             ),
         )
     ),
-    
-    
+
+
     'event_typography'       => array( // Tab
         'title'         => __('Typography', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
@@ -487,9 +487,9 @@ FLBuilder::register_module('EspressoTicketModule', array(
                 'fields'        => array( // Section Fields
                     'title_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
@@ -528,9 +528,9 @@ FLBuilder::register_module('EspressoTicketModule', array(
                 'fields'    => array(
                     'description_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
@@ -564,9 +564,9 @@ FLBuilder::register_module('EspressoTicketModule', array(
                     ),
                 )
             ),
-			'date_typography'	=> array(
-				'title'	=> __( 'Date', 'event_espresso' ),
-				'fields'	=> array(
+            'date_typography'   => array(
+                'title' => __('Date', 'event_espresso'),
+                'fields'    => array(
                     'date_font_family' => array(
                         'type'          => 'font',
                         'default'       => array(
@@ -579,7 +579,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'selector'        => '.event-date'
                         )
                     ),
-					'date_font_size'      => array(
+                    'date_font_size'      => array(
                         'type'          => 'text',
                         'label'         => __('Font Size', 'event_espresso'),
                         'description'   => 'px',
@@ -592,7 +592,7 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'unit'      => 'px'
                         )
                     ),
-					'date_text_color'    => array(
+                    'date_text_color'    => array(
                         'type'          => 'color',
                         'label'         => __('Color', 'event_espresso'),
                         'default'       => '',
@@ -603,10 +603,10 @@ FLBuilder::register_module('EspressoTicketModule', array(
                             'property'      => 'color'
                         )
                     ),
-				)
-			),
+                )
+            ),
             'ticket_typography'   => array(
-                'title' => __( 'Ticket', 'event_espresso' ),
+                'title' => __('Ticket', 'event_espresso'),
                 'fields'    => array(
                     'ticket_font_family' => array(
                         'type'          => 'font',
@@ -651,9 +651,9 @@ FLBuilder::register_module('EspressoTicketModule', array(
                 'fields'        => array( // Section Fields
                     'button_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(

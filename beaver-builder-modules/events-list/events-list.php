@@ -3,8 +3,8 @@
 /**
  * @class PPEspressoEventsListModule
  */
-class EspressoEventsListModule extends FLBuilderModule {
-
+class EspressoEventsListModule extends FLBuilderModule
+{
     /**
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
@@ -17,12 +17,12 @@ class EspressoEventsListModule extends FLBuilderModule {
             'name'          => esc_html__('Events List', 'event_espresso'),
             'description'   => esc_html__('An events list view module for Event Espresso.', 'event_espresso'),
             'group'         => esc_html__('Event Espresso', 'event_espresso'),
-            'category'		=> esc_html__('Event Styler Modules', 'event_espresso'),
+            'category'      => esc_html__('Event Styler Modules', 'event_espresso'),
             'dir'           => EE_BEAVER_BUILDER_EVENTS_LIST_MODULE_PATH,
             'url'           => EE_BEAVER_BUILDER_EVENTS_LIST_MODULE_URL,
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
-            'icon'				=> 'schedule.svg',
+            'icon'              => 'schedule.svg',
         ));
     }
 
@@ -30,8 +30,7 @@ class EspressoEventsListModule extends FLBuilderModule {
      * @method enqueue_scripts
      */
     public function enqueue_scripts()
-    {        
-        
+    {
     }
 }
 
@@ -45,23 +44,23 @@ FLBuilder::register_module('EspressoEventsListModule', array(
         'title'         => __('List', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
 
-            //Table Details
+            // Table Details
             'list_settings'     => array(
                 'title'             => __('List Details', 'event_espresso'),
                 'fields'            => array( // Section Fields
-                    
+
                     'list_title'      => array(
                         'type'          => 'text',
                         'label'         => __('List Title', 'event_espresso'),
                         'default'       => '',
                         'placeholder'   => 'Add a title to the events list (optional).',
                         'connections'   => array('string'),
-						'preview'       => array(
+                        'preview'       => array(
                             'type'      => 'text',
                             'selector'  => '.events-list-title'
                         )
                     ),
-                    
+
                     'list_description'    => array(
                         'type'              => 'textarea',
                         'label'             => __('List Description', 'event_espresso'),
@@ -155,11 +154,11 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 'fields'        => array( // Section Fields
                     'template_info'    => array(
                         'type'                      => 'additional-layout-options',
-                        'label'                     => '<p><strong>'.__('Additional Layout Options', 'event_espresso').'</strong></p><p>'.sprintf( esc_html__('%sClick here%s to manage a wider range of event list layout options.', 'event_espresso'),'<em><a href="'.admin_url( 'admin.php?page=espresso_events&action=template_settings' ).'">','</a></em>').'</p>',
+                        'label'                     => '<p><strong>' . __('Additional Layout Options', 'event_espresso') . '</strong></p><p>' . sprintf(esc_html__('%1$sClick here%2$s to manage a wider range of event list layout options.', 'event_espresso'), '<em><a href="' . admin_url('admin.php?page=espresso_events&action=template_settings') . '">', '</a></em>') . '</p>',
                     ),
                 )
             ),
-        
+
         ),
 
     ),
@@ -180,14 +179,14 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                             'property'  => 'background-color'
                         )
                     ),
-					'container_background_opacity'    => array(
+                    'container_background_opacity'    => array(
                         'type'                 => 'text',
                         'label'                => __('Background Opacity', 'event_espresso'),
                         'class'                => 'ee-eventslist-input input-small',
                         'default'              => '1',
                         'description'          => __('between 0 to 1', 'event_espresso'),
                     ),
-					
+
                 )
             ),
             'container_border'       => array(
@@ -217,14 +216,14 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                             'property'  => 'border-color'
                         )
                     ),
-                    'container_border_style' 	=> array(
+                    'container_border_style'    => array(
                         'type'          => 'select',
                         'label'         => __('Border Style', 'event_espresso'),
                         'default'       => 'solid',
-                        'options'		=> array(
-                            'solid'		=> __('Solid', 'event_espresso'),
-                       		'dashed'	=> __('Dashed', 'event_espresso'),
-                       		'dotted'	=> __('Dotted', 'event_espresso'),
+                        'options'       => array(
+                            'solid'     => __('Solid', 'event_espresso'),
+                            'dashed'    => __('Dashed', 'event_espresso'),
+                            'dotted'    => __('Dotted', 'event_espresso'),
                         ),
                         'preview'       => array(
                             'type'      => 'css',
@@ -237,7 +236,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
             'list_container'        => array(
                 'title'                 => __('Corners & Padding', 'event_espresso'),
                 'fields'                => array(
-                    'container_border_radius' 	=> array(
+                    'container_border_radius'   => array(
                         'type'          => 'text',
                         'label'         => __('Round Corners', 'event_espresso'),
                         'description'   => 'px',
@@ -254,7 +253,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                     ),
                     'container_padding'   => array(
                         'type'          => 'text',
-                        'label'         => __( 'Padding', 'event_espresso' ),
+                        'label'         => __('Padding', 'event_espresso'),
                         'default'       => 10,
                         'maxlength'     => '3',
                         'size'          => '4',
@@ -266,13 +265,13 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                             'unit'      => 'px'
                         )
                     ),
-                    
+
                 )
             ),
-            
+
         )
     ),
-    
+
     'list_typography'       => array( // Tab
         'title'         => __('Typography', 'event_espresso'), // Tab title
         'sections'      => array( // Tab Sections
@@ -281,9 +280,9 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 'fields'        => array( // Section Fields
                     'title_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
@@ -322,9 +321,9 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 'fields'    => array(
                     'description_font_family' => array(
                         'type'          => 'font',
-                        'default'		=> array(
-                            'family'		=> 'Default',
-                            'weight'		=> 300
+                        'default'       => array(
+                            'family'        => 'Default',
+                            'weight'        => 300
                         ),
                         'label'         => __('Font', 'event_espresso'),
                         'preview'         => array(
@@ -441,7 +440,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
                 )
             ),
             'date_typography'   => array(
-                'title' => __( 'Event Date', 'event_espresso' ),
+                'title' => __('Event Date', 'event_espresso'),
                 'fields'    => array(
                     'date_font_family' => array(
                         'type'          => 'font',
@@ -513,7 +512,7 @@ FLBuilder::register_module('EspressoEventsListModule', array(
             ),
         )
     ),
-    
+
     'button_style'      => array(
         'title'             => __('Button', 'event_espresso'),
         'sections'          => array(
